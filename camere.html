@@ -3,155 +3,202 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Camere &amp; Suite – Hotel Royal Cosenza</title>
+  <title>Camere e suite, Hotel Royal Cosenza</title>
   <meta name="description" content="Camere Standard, Superior Matrimoniali, Superior Triple, Family, Suite con angolo cottura e Suite Relax all'Hotel Royal di Cosenza.">
-  <meta name="theme-color" content="#12110f">
+  <meta name="theme-color" content="#f6f5f2">
   <link rel="icon" href="img/logo_royal-color.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&amp;family=Public+Sans:wght@400;600&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body data-page="camere">
-  <div id="site-header"></div>
+<body>
+  <header class="header">
+    <div class="wrap">
+      <a class="logo" href="index.html"><img src="img/logo_royal-color.png" alt="Hotel Royal Cosenza, quattro stelle" width="96" height="52"></a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+      <nav class="nav" id="nav" aria-label="Menu principale">
+      <a href="camere.html" aria-current="page">Camere</a>
+      <a href="index.html#ristorante">Ristorante</a>
+      <a href="index.html#convegni">Sala convegni</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="dove-info.html">Dove siamo</a>
+      <a class="nav-tel" href="tel:+390984412165">0984 412165</a>
+      <a class="btn" href="https://booking.slope.it/fa4448fa-8cdc-4372-9fef-4f1ab25cd155" target="_blank" rel="noopener">Prenota</a>
+      </nav>
+    </div>
+  </header>
+
   <main>
-    <header class="page-hero">
-      <div class="bg"><img src="img/Hotel-Royal-Camere-Tripla-4-1.jpg" alt="" data-parallax="0.2"></div>
-      <div class="wrap">
+    <div class="wrap">
+      <header class="page-head">
+        <h1>Camere e suite</h1>
+        <p class="intro">Arredate con gusto e attenzione ai dettagli. In tutte trovi bagno privato, aria condizionata, TV, minifrigo, cassaforte, asciugacapelli, Wi-Fi gratuito e kit di cortesia.</p>
+        <ul class="jump"><li><a href="#standard">Camera Standard</a></li><li><a href="#superior-matrimoniale">Superior Matrimoniale</a></li><li><a href="#superior-tripla">Superior Tripla</a></li><li><a href="#family">Camera Family</a></li><li><a href="#suite-angolo-cottura">Suite con angolo cottura</a></li><li><a href="#suite-relax">Suite Relax</a></li></ul>
+      </header>
+      <article class="room" id="standard" aria-labelledby="standard-title">
         <div>
-          <span class="label">Camere &amp; Suite</span>
-          <h1 class="display h-xl">Luoghi unici, <span class="it gold">tutti da vivere</span></h1>
+          <button class="room-main" type="button" aria-label="Ingrandisci la foto">
+            <img src="img/Hotel-Royal-Camere-Tripla-3.jpg" alt="Camera Standard, foto 1" width="1536" height="1025">
+          </button>
+          <div class="thumbs">
+              <button type="button" data-src="img/Hotel-Royal-Camere-Tripla-3.jpg" aria-pressed="true" aria-label="Foto 1 di 3"><img src="img/Hotel-Royal-Camere-Tripla-3.jpg" alt="Camera Standard, foto 1" loading="lazy"></button>
+              <button type="button" data-src="img/Hotel-Royal-Camere-Matrimoniale-6.jpg" aria-pressed="false" aria-label="Foto 2 di 3"><img src="img/Hotel-Royal-Camere-Matrimoniale-6.jpg" alt="Camera Standard, foto 2" loading="lazy"></button>
+              <button type="button" data-src="img/Hotel-Royal-Dettagli-8.jpg" aria-pressed="false" aria-label="Foto 3 di 3"><img src="img/Hotel-Royal-Dettagli-8.jpg" alt="Camera Standard, foto 3" loading="lazy"></button>
+          </div>
         </div>
-        <p>Arredate con gusto e attenzione ai particolari.</p>
-      </div>
-    </header>
-
-    <section class="section" style="padding-bottom:3rem">
-      <div class="wrap room-intro">
-        <p class="lead" data-fade>Le nostre camere sono ideali per chi viaggia da solo per lavoro, ma anche in compagnia e per svago. A disposizione degli ospiti bagno privato, asciugacapelli, minifrigo, cassaforte, Wi-Fi gratuito e kit di cortesia.</p>
-        <nav class="room-nav" data-stagger><a href="#standard">Camere Standard</a><a href="#superior-matrimoniale">Superior Matrimoniale</a><a href="#superior-triple">Superior Tripla</a><a href="#family">Camere Family</a><a href="#suite-angolo-cottura">Suite Angolo Cottura</a><a href="#suite-relax">Suite Relax</a></nav>
-      </div>
-    </section>
-
-    <div class="wrap stack">
-      <article class="stack-card" id="standard">
-        <div class="sc-media">
-          <img src="img/Hotel-Royal-Camere-Tripla-3.jpg" alt="Camere Standard – foto 1" data-lb="standard">
-          <img src="img/Hotel-Royal-Camere-Matrimoniale-6.jpg" alt="Camere Standard – foto 2" data-lb="standard" loading="lazy">
-          <img src="img/Hotel-Royal-Dettagli-8.jpg" alt="Camere Standard – foto 3" data-lb="standard" loading="lazy">
-          <div class="sc-dots"></div>
-          <div class="sc-arrows"><button class="sc-prev" aria-label="Foto precedente">←</button><button class="sc-next" aria-label="Foto successiva">→</button></div>
-        </div>
-        <div class="sc-body">
-          <span class="big-n">01</span>
-          <h2 class="display h-md">Camere Standard</h2>
-          <p class="lead">Comfort essenziale e posizione centrale: la scelta ideale per chi viaggia per lavoro.</p>
-          <ul class="amen"><li>Bagno privato</li><li>Asciugacapelli</li><li>TV</li><li>Minifrigo</li><li>Cassaforte</li><li>Wi-Fi gratuito</li><li>Kit di cortesia</li><li>Aria condizionata</li></ul>
-          <div class="sc-actions">
-            <a class="btn btn-gold" href="https://booking.slope.it/fa4448fa-8cdc-4372-9fef-4f1ab25cd155" target="_blank" rel="noopener">Verifica disponibilità ↗</a>
+        <div>
+          <h2 id="standard-title">Camera Standard</h2>
+          <p>Comoda e pratica, è la scelta di chi viaggia per lavoro e vuole una base in pieno centro.</p>
+          <div class="btn-row">
+            <a class="btn" href="https://booking.slope.it/fa4448fa-8cdc-4372-9fef-4f1ab25cd155" target="_blank" rel="noopener">Verifica disponibilità</a>
           </div>
         </div>
       </article>
-      <article class="stack-card" id="superior-matrimoniale">
-        <div class="sc-media">
-          <img src="img/GCF_0154.jpg" alt="Superior Matrimoniale – foto 1" data-lb="superior-matrimoniale" loading="lazy">
-          <img src="img/Hotel-Royal-Camere-Matrimoniale-2.jpg" alt="Superior Matrimoniale – foto 2" data-lb="superior-matrimoniale" loading="lazy">
-          <img src="img/Hotel-Royal-Camere-Matrimoniale-3-1.jpg" alt="Superior Matrimoniale – foto 3" data-lb="superior-matrimoniale" loading="lazy">
-          <img src="img/Hotel-Royal-Camere-Matrimoniale-2-1.jpg" alt="Superior Matrimoniale – foto 4" data-lb="superior-matrimoniale" loading="lazy">
-          <div class="sc-dots"></div>
-          <div class="sc-arrows"><button class="sc-prev" aria-label="Foto precedente">←</button><button class="sc-next" aria-label="Foto successiva">→</button></div>
+      <article class="room" id="superior-matrimoniale" aria-labelledby="superior-matrimoniale-title">
+        <div>
+          <button class="room-main" type="button" aria-label="Ingrandisci la foto">
+            <img src="img/GCF_0154.jpg" alt="Superior Matrimoniale, foto 1" width="1536" height="1025" loading="lazy">
+          </button>
+          <div class="thumbs">
+              <button type="button" data-src="img/GCF_0154.jpg" aria-pressed="true" aria-label="Foto 1 di 4"><img src="img/GCF_0154.jpg" alt="Superior Matrimoniale, foto 1" loading="lazy"></button>
+              <button type="button" data-src="img/Hotel-Royal-Camere-Matrimoniale-2.jpg" aria-pressed="false" aria-label="Foto 2 di 4"><img src="img/Hotel-Royal-Camere-Matrimoniale-2.jpg" alt="Superior Matrimoniale, foto 2" loading="lazy"></button>
+              <button type="button" data-src="img/Hotel-Royal-Camere-Matrimoniale-3-1.jpg" aria-pressed="false" aria-label="Foto 3 di 4"><img src="img/Hotel-Royal-Camere-Matrimoniale-3-1.jpg" alt="Superior Matrimoniale, foto 3" loading="lazy"></button>
+              <button type="button" data-src="img/Hotel-Royal-Camere-Matrimoniale-2-1.jpg" aria-pressed="false" aria-label="Foto 4 di 4"><img src="img/Hotel-Royal-Camere-Matrimoniale-2-1.jpg" alt="Superior Matrimoniale, foto 4" loading="lazy"></button>
+          </div>
         </div>
-        <div class="sc-body">
-          <span class="big-n">02</span>
-          <h2 class="display h-md">Superior <span class="it">Matrimoniale</span></h2>
-          <p class="lead">Spazi curati e letto matrimoniale, perfetta per una coppia in viaggio a Cosenza.</p>
-          <ul class="amen"><li>Bagno privato</li><li>Asciugacapelli</li><li>TV</li><li>Minifrigo</li><li>Cassaforte</li><li>Wi-Fi gratuito</li><li>Kit di cortesia</li><li>Aria condizionata</li></ul>
-          <div class="sc-actions">
-            <a class="btn btn-gold" href="https://booking.slope.it/fa4448fa-8cdc-4372-9fef-4f1ab25cd155" target="_blank" rel="noopener">Verifica disponibilità ↗</a>
+        <div>
+          <h2 id="superior-matrimoniale-title">Superior Matrimoniale</h2>
+          <p>Letto matrimoniale e spazi più ampi, per una coppia in viaggio a Cosenza.</p>
+          <div class="btn-row">
+            <a class="btn" href="https://booking.slope.it/fa4448fa-8cdc-4372-9fef-4f1ab25cd155" target="_blank" rel="noopener">Verifica disponibilità</a>
           </div>
         </div>
       </article>
-      <article class="stack-card" id="superior-triple">
-        <div class="sc-media">
-          <img src="img/Hotel-Royal-Camere-Tripla-2-1.jpg" alt="Superior Tripla – foto 1" data-lb="superior-triple" loading="lazy">
-          <img src="img/Hotel-Royal-Camere-Tripla-4-1.jpg" alt="Superior Tripla – foto 2" data-lb="superior-triple" loading="lazy">
-          <img src="img/Hotel-Royal-Camere-Tripla-4-2.jpg" alt="Superior Tripla – foto 3" data-lb="superior-triple" loading="lazy">
-          <div class="sc-dots"></div>
-          <div class="sc-arrows"><button class="sc-prev" aria-label="Foto precedente">←</button><button class="sc-next" aria-label="Foto successiva">→</button></div>
+      <article class="room" id="superior-tripla" aria-labelledby="superior-tripla-title">
+        <div>
+          <button class="room-main" type="button" aria-label="Ingrandisci la foto">
+            <img src="img/Hotel-Royal-Camere-Tripla-2-1.jpg" alt="Superior Tripla, foto 1" width="1536" height="1025" loading="lazy">
+          </button>
+          <div class="thumbs">
+              <button type="button" data-src="img/Hotel-Royal-Camere-Tripla-2-1.jpg" aria-pressed="true" aria-label="Foto 1 di 3"><img src="img/Hotel-Royal-Camere-Tripla-2-1.jpg" alt="Superior Tripla, foto 1" loading="lazy"></button>
+              <button type="button" data-src="img/Hotel-Royal-Camere-Tripla-4-1.jpg" aria-pressed="false" aria-label="Foto 2 di 3"><img src="img/Hotel-Royal-Camere-Tripla-4-1.jpg" alt="Superior Tripla, foto 2" loading="lazy"></button>
+              <button type="button" data-src="img/Hotel-Royal-Camere-Tripla-4-2.jpg" aria-pressed="false" aria-label="Foto 3 di 3"><img src="img/Hotel-Royal-Camere-Tripla-4-2.jpg" alt="Superior Tripla, foto 3" loading="lazy"></button>
+          </div>
         </div>
-        <div class="sc-body">
-          <span class="big-n">03</span>
-          <h2 class="display h-md">Superior <span class="it">Tripla</span></h2>
-          <p class="lead">Il comfort Superior con un posto letto in più, per amici o piccole famiglie.</p>
-          <ul class="amen"><li>Bagno privato</li><li>Asciugacapelli</li><li>TV</li><li>Minifrigo</li><li>Cassaforte</li><li>Wi-Fi gratuito</li><li>Kit di cortesia</li><li>Aria condizionata</li></ul>
-          <div class="sc-actions">
-            <a class="btn btn-gold" href="https://booking.slope.it/fa4448fa-8cdc-4372-9fef-4f1ab25cd155" target="_blank" rel="noopener">Verifica disponibilità ↗</a>
+        <div>
+          <h2 id="superior-tripla-title">Superior Tripla</h2>
+          <p>Il comfort della Superior con un letto in più, per amici o piccole famiglie.</p>
+          <div class="btn-row">
+            <a class="btn" href="https://booking.slope.it/fa4448fa-8cdc-4372-9fef-4f1ab25cd155" target="_blank" rel="noopener">Verifica disponibilità</a>
           </div>
         </div>
       </article>
-      <article class="stack-card" id="family">
-        <div class="sc-media">
-          <img src="img/Hotel-Royal-Camere-Bilocale-3.jpg" alt="Camere Family – foto 1" data-lb="family" loading="lazy">
-          <img src="img/Hotel-Royal-Camere-Bilocale-2.jpg" alt="Camere Family – foto 2" data-lb="family" loading="lazy">
-          <img src="img/Hotel-Royal-Camere-Bilocale-6.jpg" alt="Camere Family – foto 3" data-lb="family" loading="lazy">
-          <img src="img/Hotel-Royal-Camere-Bilocale-9.jpg" alt="Camere Family – foto 4" data-lb="family" loading="lazy">
-          <img src="img/Hotel-Royal-Camere-Bilocale-11.jpg" alt="Camere Family – foto 5" data-lb="family" loading="lazy">
-          <div class="sc-dots"></div>
-          <div class="sc-arrows"><button class="sc-prev" aria-label="Foto precedente">←</button><button class="sc-next" aria-label="Foto successiva">→</button></div>
+      <article class="room" id="family" aria-labelledby="family-title">
+        <div>
+          <button class="room-main" type="button" aria-label="Ingrandisci la foto">
+            <img src="img/Hotel-Royal-Camere-Bilocale-3.jpg" alt="Camera Family, foto 1" width="1536" height="1025" loading="lazy">
+          </button>
+          <div class="thumbs">
+              <button type="button" data-src="img/Hotel-Royal-Camere-Bilocale-3.jpg" aria-pressed="true" aria-label="Foto 1 di 5"><img src="img/Hotel-Royal-Camere-Bilocale-3.jpg" alt="Camera Family, foto 1" loading="lazy"></button>
+              <button type="button" data-src="img/Hotel-Royal-Camere-Bilocale-2.jpg" aria-pressed="false" aria-label="Foto 2 di 5"><img src="img/Hotel-Royal-Camere-Bilocale-2.jpg" alt="Camera Family, foto 2" loading="lazy"></button>
+              <button type="button" data-src="img/Hotel-Royal-Camere-Bilocale-6.jpg" aria-pressed="false" aria-label="Foto 3 di 5"><img src="img/Hotel-Royal-Camere-Bilocale-6.jpg" alt="Camera Family, foto 3" loading="lazy"></button>
+              <button type="button" data-src="img/Hotel-Royal-Camere-Bilocale-9.jpg" aria-pressed="false" aria-label="Foto 4 di 5"><img src="img/Hotel-Royal-Camere-Bilocale-9.jpg" alt="Camera Family, foto 4" loading="lazy"></button>
+              <button type="button" data-src="img/Hotel-Royal-Camere-Bilocale-11.jpg" aria-pressed="false" aria-label="Foto 5 di 5"><img src="img/Hotel-Royal-Camere-Bilocale-11.jpg" alt="Camera Family, foto 5" loading="lazy"></button>
+          </div>
         </div>
-        <div class="sc-body">
-          <span class="big-n">04</span>
-          <h2 class="display h-md">Camere <span class="it">Family</span></h2>
-          <p class="lead">Soluzioni su più ambienti, pensate per le famiglie che cercano spazio e privacy.</p>
-          <ul class="amen"><li>Bagno privato</li><li>Asciugacapelli</li><li>TV</li><li>Minifrigo</li><li>Cassaforte</li><li>Wi-Fi gratuito</li><li>Kit di cortesia</li><li>Aria condizionata</li></ul>
-          <div class="sc-actions">
-            <a class="btn btn-gold" href="https://booking.slope.it/fa4448fa-8cdc-4372-9fef-4f1ab25cd155" target="_blank" rel="noopener">Verifica disponibilità ↗</a>
+        <div>
+          <h2 id="family-title">Camera Family</h2>
+          <p>Più ambienti in un’unica soluzione, per le famiglie che cercano spazio e privacy.</p>
+          <div class="btn-row">
+            <a class="btn" href="https://booking.slope.it/fa4448fa-8cdc-4372-9fef-4f1ab25cd155" target="_blank" rel="noopener">Verifica disponibilità</a>
           </div>
         </div>
       </article>
-      <article class="stack-card" id="suite-angolo-cottura">
-        <div class="sc-media">
-          <img src="img/GCF_0395.jpg" alt="Suite Angolo Cottura – foto 1" data-lb="suite-angolo-cottura" loading="lazy">
-          <img src="img/GCF_0374.jpg" alt="Suite Angolo Cottura – foto 2" data-lb="suite-angolo-cottura" loading="lazy">
-          <img src="img/GCF_0383.jpg" alt="Suite Angolo Cottura – foto 3" data-lb="suite-angolo-cottura" loading="lazy">
-          <div class="sc-dots"></div>
-          <div class="sc-arrows"><button class="sc-prev" aria-label="Foto precedente">←</button><button class="sc-next" aria-label="Foto successiva">→</button></div>
+      <article class="room" id="suite-angolo-cottura" aria-labelledby="suite-angolo-cottura-title">
+        <div>
+          <button class="room-main" type="button" aria-label="Ingrandisci la foto">
+            <img src="img/GCF_0395.jpg" alt="Suite con angolo cottura, foto 1" width="1536" height="1025" loading="lazy">
+          </button>
+          <div class="thumbs">
+              <button type="button" data-src="img/GCF_0395.jpg" aria-pressed="true" aria-label="Foto 1 di 3"><img src="img/GCF_0395.jpg" alt="Suite con angolo cottura, foto 1" loading="lazy"></button>
+              <button type="button" data-src="img/GCF_0374.jpg" aria-pressed="false" aria-label="Foto 2 di 3"><img src="img/GCF_0374.jpg" alt="Suite con angolo cottura, foto 2" loading="lazy"></button>
+              <button type="button" data-src="img/GCF_0383.jpg" aria-pressed="false" aria-label="Foto 3 di 3"><img src="img/GCF_0383.jpg" alt="Suite con angolo cottura, foto 3" loading="lazy"></button>
+          </div>
         </div>
-        <div class="sc-body">
-          <span class="big-n">05</span>
-          <h2 class="display h-md">Suite <span class="it">Angolo Cottura</span></h2>
-          <p class="lead">L’indipendenza di un angolo cottura con tutti i servizi di un hotel 4 stelle, ideale per soggiorni prolungati.</p>
-          <ul class="amen"><li>Angolo cottura</li><li>Bagno privato</li><li>Asciugacapelli</li><li>TV</li><li>Minifrigo</li><li>Cassaforte</li><li>Wi-Fi gratuito</li><li>Kit di cortesia</li></ul>
-          <div class="sc-actions">
-            <a class="btn btn-gold" href="https://booking.slope.it/fa4448fa-8cdc-4372-9fef-4f1ab25cd155" target="_blank" rel="noopener">Verifica disponibilità ↗</a>
-            <a class="btn btn-line" href="https://my.matterport.com/show/?m=qAsuZwDXsB5&amp;sr=-.16,.93&amp;ss=205" target="_blank" rel="noopener">Virtual Tour 3D ↗</a>
+        <div>
+          <h2 id="suite-angolo-cottura-title">Suite con angolo cottura</h2>
+          <p>L’indipendenza di un angolo cottura con i servizi di un quattro stelle, comoda per i soggiorni più lunghi.</p>
+          <p class="room-extra">In più: angolo cottura.</p>
+          <div class="btn-row">
+            <a class="btn" href="https://booking.slope.it/fa4448fa-8cdc-4372-9fef-4f1ab25cd155" target="_blank" rel="noopener">Verifica disponibilità</a>
+            <a class="btn btn-line" href="https://my.matterport.com/show/?m=qAsuZwDXsB5&amp;sr=-.16,.93&amp;ss=205" target="_blank" rel="noopener">Tour virtuale 3D</a>
           </div>
         </div>
       </article>
-      <article class="stack-card" id="suite-relax">
-        <div class="sc-media">
-          <img src="img/GCF_0015.jpg" alt="Suite Relax – foto 1" data-lb="suite-relax" loading="lazy">
-          <img src="img/GCF_0046.jpg" alt="Suite Relax – foto 2" data-lb="suite-relax" loading="lazy">
-          <img src="img/GCF_0040.jpg" alt="Suite Relax – foto 3" data-lb="suite-relax" loading="lazy">
-          <div class="sc-dots"></div>
-          <div class="sc-arrows"><button class="sc-prev" aria-label="Foto precedente">←</button><button class="sc-next" aria-label="Foto successiva">→</button></div>
+      <article class="room" id="suite-relax" aria-labelledby="suite-relax-title">
+        <div>
+          <button class="room-main" type="button" aria-label="Ingrandisci la foto">
+            <img src="img/GCF_0015.jpg" alt="Suite Relax, foto 1" width="1536" height="1025" loading="lazy">
+          </button>
+          <div class="thumbs">
+              <button type="button" data-src="img/GCF_0015.jpg" aria-pressed="true" aria-label="Foto 1 di 3"><img src="img/GCF_0015.jpg" alt="Suite Relax, foto 1" loading="lazy"></button>
+              <button type="button" data-src="img/GCF_0046.jpg" aria-pressed="false" aria-label="Foto 2 di 3"><img src="img/GCF_0046.jpg" alt="Suite Relax, foto 2" loading="lazy"></button>
+              <button type="button" data-src="img/GCF_0040.jpg" aria-pressed="false" aria-label="Foto 3 di 3"><img src="img/GCF_0040.jpg" alt="Suite Relax, foto 3" loading="lazy"></button>
+          </div>
         </div>
-        <div class="sc-body">
-          <span class="big-n">06</span>
-          <h2 class="display h-md">Suite <span class="it">Relax</span></h2>
-          <p class="lead">La nostra suite più esclusiva, per un soggiorno all’insegna del benessere nel cuore di Cosenza.</p>
-          <ul class="amen"><li>Bagno privato</li><li>Asciugacapelli</li><li>TV</li><li>Minifrigo</li><li>Cassaforte</li><li>Wi-Fi gratuito</li><li>Kit di cortesia</li><li>Aria condizionata</li></ul>
-          <div class="sc-actions">
-            <a class="btn btn-gold" href="https://booking.slope.it/fa4448fa-8cdc-4372-9fef-4f1ab25cd155" target="_blank" rel="noopener">Verifica disponibilità ↗</a>
-            <a class="btn btn-line" href="https://my.matterport.com/show/?m=qAsuZwDXsB5&amp;sr=-.16,.93&amp;ss=205" target="_blank" rel="noopener">Virtual Tour 3D ↗</a>
+        <div>
+          <h2 id="suite-relax-title">Suite Relax</h2>
+          <p>La nostra suite più esclusiva, per un soggiorno di riposo nel cuore della città.</p>
+          <div class="btn-row">
+            <a class="btn" href="https://booking.slope.it/fa4448fa-8cdc-4372-9fef-4f1ab25cd155" target="_blank" rel="noopener">Verifica disponibilità</a>
+            <a class="btn btn-line" href="https://my.matterport.com/show/?m=qAsuZwDXsB5&amp;sr=-.16,.93&amp;ss=205" target="_blank" rel="noopener">Tour virtuale 3D</a>
           </div>
         </div>
       </article>
     </div>
   </main>
-  <div id="site-footer"></div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-top">
+        <div>
+          <img src="img/logo_royal-white.png" alt="Hotel Royal Cosenza" width="118" height="64">
+          <p>Hotel quattro stelle nel centro di Cosenza, a pochi passi dal MAB, da Corso Mazzini e dal Duomo.</p>
+        </div>
+        <div>
+          <h2>Contatti</h2>
+          <ul>
+            <li>Via delle Medaglie d'Oro, 87100 Cosenza</li>
+            <li><a href="tel:+390984412165">Telefono e fax 0984 412165</a></li>
+            <li><a href="https://wa.me/393760412155" target="_blank" rel="noopener">WhatsApp 376 041 2155</a></li>
+            <li><a href="mailto:direzione@hotelroyalsas.it">direzione@hotelroyalsas.it</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Prenotazioni</h2>
+          <ul>
+            <li><a href="https://booking.slope.it/fa4448fa-8cdc-4372-9fef-4f1ab25cd155" target="_blank" rel="noopener">Verifica disponibilità</a></li>
+            <li><a href="https://booking.slope.it/fa4448fa-8cdc-4372-9fef-4f1ab25cd155/quote-request" target="_blank" rel="noopener">Richiedi un preventivo</a></li>
+            <li><a href="https://my.matterport.com/show/?m=qAsuZwDXsB5" target="_blank" rel="noopener">Tour virtuale 3D</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Il sito</h2>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="camere.html">Camere</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="dove-info.html">Dove siamo</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-legal">
+        <span>Hotel Royal Cosenza, P.IVA 01612120780</span>
+        <span>Codice regionale 078045-ALB-00004, CIN IT078045A1EGHN33YP</span>
+      </div>
+    </div>
+  </footer>
   <script src="js/main.js"></script>
 </body>
 </html>
