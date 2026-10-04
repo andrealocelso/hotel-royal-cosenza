@@ -12,7 +12,7 @@ Pubblicato con GitHub Pages.
 | `gallery.html` | Galleria fotografica con filtri e lightbox |
 | `dove-info.html` | Contatti, modulo di richiesta, mappa |
 | `css/style.css` | Stile |
-| `js/main.js` | Header/menu/footer condivisi, animazioni (GSAP + ScrollTrigger + Lenis da CDN), dati dell'hotel |
+| `js/main.js` | Header/menu/footer condivisi, animazioni (GSAP + ScrollTrigger da CDN), dati dell'hotel |
 | `img/` | Foto e logo |
 
 Telefono, email, link di prenotazione e tour 3D si modificano in un solo punto: l'oggetto `HOTEL` in cima a `js/main.js`.

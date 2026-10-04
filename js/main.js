@@ -28,10 +28,6 @@ const page = document.body.dataset.page;
 const hasGSAP = typeof window.gsap !== "undefined";
 const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const animate = hasGSAP && !reduce;
-const store = {
-  get(k) { try { return sessionStorage.getItem(k); } catch { return null; } },
-  set(k, v) { try { sessionStorage.setItem(k, v); } catch {} },
-};
 
 /* ---------- Chrome: header, menu, footer ---------- */
 function renderChrome() {
@@ -40,7 +36,7 @@ function renderChrome() {
       <a href="index.html" class="logo" aria-label="Hotel Royal Cosenza"><img src="img/logo_royal-white.png" alt="Hotel Royal Cosenza ****"></a>
       <div class="header-right">
         <a class="tel link-u" href="${HOTEL.phoneHref}">${HOTEL.phone}</a>
-        <a class="btn btn-gold magnetic" href="${HOTEL.booking}" target="_blank" rel="noopener">Prenota ${ARROW}</a>
+        <a class="btn btn-gold" href="${HOTEL.booking}" target="_blank" rel="noopener">Prenota ${ARROW}</a>
         <button class="menu-btn" aria-expanded="false" aria-controls="menu"><span class="menu-txt">Menu</span><span class="bars"><i></i><i></i></span></button>
       </div>
     </div></header>
@@ -62,7 +58,7 @@ function renderChrome() {
         <span class="label">Viaggio a Cosenza?</span>
         <h2 class="display h-lg" data-split>La migliore tariffa <span class="it gold">è sempre qui</span></h2>
         <p data-fade>Controlla subito le disponibilità in base alle date del tuo viaggio: sul nostro sito troverai sempre la migliore tariffa disponibile.</p>
-        <span class="magnetic"><a class="btn btn-gold" href="${HOTEL.booking}" target="_blank" rel="noopener">Verifica disponibilità ${ARROW}</a></span>
+        <span><a class="btn btn-gold" href="${HOTEL.booking}" target="_blank" rel="noopener">Verifica disponibilità ${ARROW}</a></span>
       </div>
     </section>
     <footer class="footer"><div class="wrap">
@@ -92,9 +88,7 @@ function renderChrome() {
     </div></footer>
     <a class="wa" href="${HOTEL.whatsapp}" target="_blank" rel="noopener" aria-label="Scrivici su WhatsApp">
       <svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 2.5 1 3 .8 3.6.7.6-.1 1.8-.7 2-1.5.2-.7.2-1.4.2-1.5-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
-    </a>
-    <div class="cursor"><span>Vedi</span></div><div class="cursor-dot"></div>
-    <div class="curtain" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>`;
+    </a>`;
 }
 
 /* ---------- Text splitting ---------- */
@@ -131,19 +125,6 @@ function splitScrubWords(el) {
   return el.querySelectorAll(".word");
 }
 
-/* ---------- Smooth scroll ---------- */
-let lenis = null;
-function initLenis() {
-  if (!animate || typeof window.Lenis === "undefined") return;
-  lenis = new Lenis({ duration: 1.2, easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)) });
-  lenis.on("scroll", ScrollTrigger.update);
-  gsap.ticker.add(t => lenis.raf(t * 1000));
-  gsap.ticker.lagSmoothing(0);
-  document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener("click", e => {
-    const t = document.querySelector(a.getAttribute("href"));
-    if (t) { e.preventDefault(); lenis.scrollTo(t, { offset: -60 }); }
-  }));
-}
 
 /* ---------- Header behaviour ---------- */
 function initHeader() {
@@ -171,8 +152,8 @@ function initMenu() {
   if (hasGSAP) {
     tl = gsap.timeline({ paused: true })
       .set(menu, { visibility: "visible" })
-      .to(menu, { clipPath: "inset(0 0 0% 0)", duration: 1, ease: "expo.inOut" })
-      .from(links, { yPercent: 110, opacity: 0, duration: 1, stagger: .06, ease: "expo.out" }, "-=.45")
+      .to(menu, { clipPath: "inset(0 0 0% 0)", duration: .6, ease: "power3.inOut" })
+      .from(links, { y: 20, opacity: 0, duration: .5, stagger: .04, ease: "power2.out" }, "-=.25")
       .from(".menu-foot > *", { y: 20, opacity: 0, stagger: .05, duration: .6 }, "-=.7");
   }
   const toggle = state => {
@@ -182,7 +163,7 @@ function initMenu() {
     txt.textContent = open ? "Chiudi" : "Menu";
     if (tl) open ? tl.timeScale(1).play() : tl.timeScale(1.6).reverse();
     else { menu.style.visibility = open ? "visible" : "hidden"; menu.style.clipPath = open ? "inset(0)" : ""; }
-    if (lenis) open ? lenis.stop() : lenis.start();
+    document.documentElement.style.overflow = open ? "hidden" : "";
   };
   btn.addEventListener("click", () => toggle());
   document.addEventListener("keydown", e => { if (e.key === "Escape" && open) toggle(false); });
@@ -192,103 +173,29 @@ function initMenu() {
   });
 }
 
-/* ---------- Cursor + magnetic ---------- */
-function initCursor() {
-  if (window.matchMedia("(pointer: coarse)").matches) return;
-  const c = document.querySelector(".cursor"), d = document.querySelector(".cursor-dot");
-  const label = c.querySelector("span");
-  let x = innerWidth / 2, y = innerHeight / 2, cx = x, cy = y;
-  window.addEventListener("mousemove", e => { x = e.clientX; y = e.clientY; d.style.transform = `translate(${x}px, ${y}px) translate(-50%, -50%)`; });
-  const loop = () => {
-    cx += (x - cx) * .16; cy += (y - cy) * .16;
-    c.style.transform = `translate(${cx}px, ${cy}px) translate(-50%, -50%)`;
-    requestAnimationFrame(loop);
-  };
-  loop();
-  document.addEventListener("mouseover", e => {
-    const v = e.target.closest("[data-cursor]");
-    const l = e.target.closest("a, button, input, select, textarea, label");
-    c.classList.toggle("is-view", !!v);
-    c.classList.toggle("is-link", !v && !!l);
-    if (v) label.textContent = v.dataset.cursor;
-  });
-  document.querySelectorAll(".magnetic").forEach(m => {
-    m.addEventListener("mousemove", e => {
-      const r = m.getBoundingClientRect();
-      const mx = (e.clientX - r.left - r.width / 2) * .3, my = (e.clientY - r.top - r.height / 2) * .4;
-      m.style.transform = `translate(${mx}px, ${my}px)`;
-    });
-    m.addEventListener("mouseleave", () => { m.style.transition = "transform .6s cubic-bezier(.16,1,.3,1)"; m.style.transform = ""; setTimeout(() => (m.style.transition = ""), 600); });
-  });
-}
-
-/* ---------- Preloader & page transitions ---------- */
-function intro() {
-  return new Promise(resolve => {
-    const curtain = document.querySelector(".curtain");
-    const bars = curtain.querySelectorAll("i");
-    const first = page === "home" && !store.get("royal-visited");
-    if (!animate) { document.querySelector(".preloader")?.remove(); return resolve(); }
-    if (first) {
-      store.set("royal-visited", "1");
-      const pl = document.querySelector(".preloader");
-      const count = pl.querySelector(".pl-count");
-      const obj = { v: 0 };
-      gsap.timeline({ onComplete: () => { pl.remove(); } })
-        .to(pl.querySelector("img"), { clipPath: "inset(0% 0 0 0)", duration: 1.2, ease: "expo.inOut" })
-        .to(pl.querySelector(".pl-bar i"), { scaleX: 1, duration: 1.8, ease: "power2.inOut" }, 0)
-        .to(obj, { v: 100, duration: 1.8, ease: "power2.inOut", onUpdate: () => (count.textContent = String(Math.round(obj.v)).padStart(3, "0")) }, 0)
-        .to(pl.querySelector(".pl-inner"), { y: -40, opacity: 0, duration: .6, ease: "power3.in" })
-        .to(pl, { yPercent: -100, duration: 1.1, ease: "expo.inOut", onStart: () => setTimeout(resolve, 350) });
-    } else {
-      document.querySelector(".preloader")?.remove();
-      gsap.set(bars, { scaleY: 1, transformOrigin: "top" });
-      gsap.to(bars, { scaleY: 0, duration: .9, stagger: .06, ease: "expo.inOut", delay: .05 });
-      setTimeout(resolve, 350);
-    }
-  });
-}
-function initTransitions() {
-  if (!animate) return;
-  const bars = document.querySelectorAll(".curtain i");
-  document.addEventListener("click", e => {
-    const a = e.target.closest("a");
-    if (!a || a.target === "_blank" || e.metaKey || e.ctrlKey || e.shiftKey) return;
-    const href = a.getAttribute("href");
-    if (!href || href.startsWith("#") || href.startsWith("mailto:") || href.startsWith("tel:") || /^https?:/.test(href)) return;
-    const [path, hash] = href.split("#");
-    const current = location.pathname.split("/").pop() || "index.html";
-    if (hash && path === current) return;
-    e.preventDefault();
-    gsap.set(bars, { transformOrigin: "bottom" });
-    gsap.to(bars, { scaleY: 1, duration: .7, stagger: .05, ease: "expo.inOut", onComplete: () => (location.href = href) });
-  });
-  window.addEventListener("pageshow", e => { if (e.persisted) gsap.set(bars, { scaleY: 0 }); });
-}
-
 /* ---------- Generic scroll animations ---------- */
 function initScrollFx() {
   if (!animate) return;
   document.querySelectorAll("[data-split]").forEach(el => {
     const words = splitWords(el);
-    gsap.from(words, { yPercent: 115, rotate: 4, duration: 1.3, stagger: .05, ease: "expo.out", scrollTrigger: { trigger: el, start: "top 88%" } });
+    gsap.from(words, { yPercent: 110, duration: .9, stagger: .03, ease: "power3.out", scrollTrigger: { trigger: el, start: "top 88%" } });
   });
   document.querySelectorAll("[data-fade]").forEach(el => {
-    gsap.from(el, { y: 50, opacity: 0, duration: 1.3, ease: "expo.out", delay: +el.dataset.fade || 0, scrollTrigger: { trigger: el, start: "top 90%" } });
+    gsap.from(el, { y: 24, opacity: 0, duration: .9, ease: "power2.out", delay: +el.dataset.fade || 0, scrollTrigger: { trigger: el, start: "top 90%" } });
   });
   document.querySelectorAll("[data-stagger]").forEach(el => {
-    gsap.from(el.children, { y: 60, opacity: 0, duration: 1.2, stagger: .08, ease: "expo.out", scrollTrigger: { trigger: el, start: "top 85%" } });
+    gsap.from(el.children, { y: 24, opacity: 0, duration: .8, stagger: .05, ease: "power2.out", scrollTrigger: { trigger: el, start: "top 85%" } });
   });
   document.querySelectorAll("[data-reveal]").forEach(el => {
     const img = el.querySelector("img");
     const tl = gsap.timeline({ scrollTrigger: { trigger: el, start: "top 85%" } });
-    tl.from(el, { clipPath: "inset(100% 0 0 0)", duration: 1.6, ease: "expo.inOut" });
-    if (img) tl.from(img, { scale: 1.4, duration: 2, ease: "expo.out" }, 0.2);
+    tl.from(el, { clipPath: "inset(100% 0 0 0)", duration: 1.1, ease: "power3.inOut" });
+    if (img) tl.from(img, { scale: 1.12, duration: 1.4, ease: "power2.out" }, 0.1);
   });
   document.querySelectorAll("[data-parallax]").forEach(el => {
     const amt = +el.dataset.parallax || .15;
     const target = el.tagName === "IMG" || el.classList.contains("bg") ? el : el.querySelector("img") || el;
-    gsap.fromTo(target, { yPercent: -amt * 50 }, { yPercent: amt * 50, ease: "none", scrollTrigger: { trigger: el.parentElement, start: "top bottom", end: "bottom top", scrub: true } });
+    gsap.fromTo(target, { yPercent: -amt * 25 }, { yPercent: amt * 25, ease: "none", scrollTrigger: { trigger: el.parentElement, start: "top bottom", end: "bottom top", scrub: true } });
   });
   document.querySelectorAll("[data-count]").forEach(el => {
     const end = +el.dataset.count, obj = { v: 0 };
@@ -303,7 +210,7 @@ function initScrollFx() {
   const giant = document.querySelector("[data-chars-footer]");
   if (giant) {
     const chars = splitChars(giant);
-    gsap.from(chars, { yPercent: 100, opacity: 0, duration: 1.4, stagger: .07, ease: "expo.out", scrollTrigger: { trigger: giant, start: "top 95%" } });
+    gsap.from(chars, { yPercent: 60, opacity: 0, duration: 1, stagger: .05, ease: "power3.out", scrollTrigger: { trigger: giant, start: "top 95%" } });
   }
 }
 
@@ -335,17 +242,15 @@ function heroIntro() {
   const lines = h1.querySelectorAll(".hl");
   const chars = [...lines].flatMap(l => [...splitChars(l)]);
   gsap.timeline()
-    .from(".hero-media", { scale: 1.25, duration: 2.4, ease: "expo.out" })
-    .from(chars, { yPercent: 120, rotate: 8, duration: 1.4, stagger: .045, ease: "expo.out" }, .1)
-    .from(".hero-top > *", { y: 30, opacity: 0, stagger: .08, duration: 1, ease: "expo.out" }, .5)
-    .from(".hero-sub > *", { y: 40, opacity: 0, stagger: .1, duration: 1.2, ease: "expo.out" }, .7)
-    .from(".hero .booking", { y: 60, opacity: 0, duration: 1.3, ease: "expo.out" }, .9)
-    .from(".header .wrap", { yPercent: -100, duration: 1.2, ease: "expo.out" }, .6)
-    .from(".hero-scroll, .hero-progress", { opacity: 0, duration: 1 }, 1.2);
+    .from(".hero-media", { scale: 1.08, duration: 1.6, ease: "power2.out" })
+    .from(chars, { yPercent: 110, duration: 1, stagger: .03, ease: "power3.out" }, .1)
+    .from(".hero-top > *, .hero-sub > *", { y: 20, opacity: 0, stagger: .06, duration: .8, ease: "power2.out" }, .4)
+    .from(".hero .booking", { y: 24, opacity: 0, duration: .8, ease: "power2.out" }, .6)
+    .from(".hero-scroll, .hero-progress", { opacity: 0, duration: .8 }, .8);
 }
 function heroScroll() {
   if (!animate) return;
-  gsap.to(".hero-media", { scale: 1.12, yPercent: 12, ease: "none", scrollTrigger: { trigger: ".hero", start: "top top", end: "bottom top", scrub: true } });
+  gsap.to(".hero-media", { yPercent: 8, ease: "none", scrollTrigger: { trigger: ".hero", start: "top top", end: "bottom top", scrub: true } });
   gsap.to(".hero-content", { yPercent: -18, opacity: 0, ease: "none", scrollTrigger: { trigger: ".hero", start: "top top", end: "80% top", scrub: true } });
 }
 function initRoomsScroller() {
@@ -365,27 +270,16 @@ function initRoomsScroller() {
       },
     });
     cards.forEach(card => {
-      gsap.from(card.querySelector("img"), { scale: 1.3, ease: "none", scrollTrigger: { trigger: card, containerAnimation: tween, start: "left right", end: "right left", scrub: true } });
+      gsap.from(card.querySelector("img"), { scale: 1.1, ease: "none", scrollTrigger: { trigger: card, containerAnimation: tween, start: "left right", end: "right left", scrub: true } });
     });
   });
 }
 function initTour() {
   if (!animate) return;
-  gsap.timeline({ scrollTrigger: { trigger: ".tour", start: "top top", end: "+=120%", pin: true, scrub: 1 } })
+  gsap.timeline({ scrollTrigger: { trigger: ".tour", start: "top top", end: "+=70%", pin: true, scrub: .6 } })
     .to(".tour-media", { clipPath: "circle(75% at 50% 50%)", ease: "power2.inOut" })
-    .from(".tour-media img", { scale: 1.5, ease: "power2.inOut" }, 0)
-    .from(".tour-content > *", { y: 80, opacity: 0, stagger: .1, ease: "power2.out" }, .3);
-}
-function initTilt() {
-  document.querySelectorAll(".offer-card").forEach(card => {
-    card.addEventListener("mousemove", e => {
-      const r = card.getBoundingClientRect();
-      const px = (e.clientX - r.left) / r.width, py = (e.clientY - r.top) / r.height;
-      card.style.transform = `rotateY(${(px - .5) * 14}deg) rotateX(${(.5 - py) * 14}deg)`;
-      card.style.setProperty("--mx", px * 100 + "%"); card.style.setProperty("--my", py * 100 + "%");
-    });
-    card.addEventListener("mouseleave", () => { card.style.transform = ""; });
-  });
+    .from(".tour-media img", { scale: 1.15, ease: "power2.inOut" }, 0)
+    .from(".tour-content > *", { y: 30, opacity: 0, stagger: .1, ease: "power2.out" }, .3);
 }
 function initBooking() {
   document.querySelectorAll(".booking-form").forEach(form => {
@@ -422,7 +316,7 @@ function initStack() {
   gsap.matchMedia().add("(min-width: 961px)", () => {
     cards.forEach((card, n) => {
       if (n === cards.length - 1) return;
-      gsap.to(card, { scale: .9, opacity: .35, filter: "blur(2px)", ease: "none",
+      gsap.to(card, { scale: .95, opacity: .6, ease: "none",
         scrollTrigger: { trigger: cards[n + 1], start: "top bottom", end: "top 90px", scrub: true } });
     });
   });
@@ -444,14 +338,14 @@ function initGallery() {
     const state = hasGSAP && window.Flip ? Flip.getState(items) : null;
     items.forEach(it => it.classList.toggle("hidden", cat !== "all" && it.dataset.cat !== cat));
     if (state && animate) {
-      Flip.from(state, { duration: .9, ease: "expo.inOut", stagger: .02, absolute: true,
+      Flip.from(state, { duration: .6, ease: "power2.inOut", absolute: true,
         onEnter: els => gsap.fromTo(els, { opacity: 0, scale: .85 }, { opacity: 1, scale: 1, duration: .8 }),
         onLeave: els => gsap.to(els, { opacity: 0, scale: .85, duration: .5 }),
         onComplete: () => ScrollTrigger.refresh() });
     }
   });
   if (animate) {
-    ScrollTrigger.batch(items, { start: "top 92%", onEnter: b => gsap.from(b, { y: 80, opacity: 0, duration: 1.2, stagger: .08, ease: "expo.out" }), once: true });
+    ScrollTrigger.batch(items, { start: "top 92%", onEnter: b => gsap.from(b, { y: 24, opacity: 0, duration: .7, stagger: .05, ease: "power2.out" }), once: true });
   }
 }
 function initLightbox() {
@@ -469,7 +363,7 @@ function initLightbox() {
   const show = (n, dir = 1) => {
     idx = (n + list.length) % list.length;
     const src = list[idx].currentSrc || list[idx].src;
-    if (animate) gsap.fromTo(big, { x: 60 * dir, opacity: 0 }, { x: 0, opacity: 1, duration: .7, ease: "expo.out" });
+    if (animate) gsap.fromTo(big, { opacity: 0 }, { opacity: 1, duration: .35 });
     big.src = src; big.alt = list[idx].alt;
     count.textContent = `${String(idx + 1).padStart(2, "0")} / ${String(list.length).padStart(2, "0")}`;
     [...thumbs.children].forEach((t, j) => t.classList.toggle("on", j === idx));
@@ -480,10 +374,10 @@ function initLightbox() {
     list = all.filter(x => x.dataset.lb === g && !x.closest(".hidden"));
     thumbs.innerHTML = "";
     list.forEach((x, j) => { const t = new Image(); t.src = x.src; t.alt = ""; t.onclick = () => show(j, j > idx ? 1 : -1); thumbs.appendChild(t); });
-    lb.classList.add("open"); lenis?.stop();
+    lb.classList.add("open"); document.documentElement.style.overflow = "hidden";
     show(list.indexOf(img), 0);
   };
-  const close = () => { lb.classList.remove("open"); lenis?.start(); };
+  const close = () => { lb.classList.remove("open"); document.documentElement.style.overflow = ""; };
   all.forEach(img => img.addEventListener("click", () => open(img)));
   lb.querySelector(".lb-close").onclick = close;
   lb.querySelector(".lb-prev").onclick = () => show(idx - 1, -1);
@@ -515,13 +409,9 @@ function initContact() {
 /* ---------- Boot ---------- */
 renderChrome();
 if (hasGSAP) gsap.registerPlugin(...[window.ScrollTrigger, window.Flip].filter(Boolean));
-initLenis();
 initHeader();
 initMenu();
-initCursor();
-initTransitions();
 initBooking();
-initTilt();
 initLightbox();
 
 if (page === "home") { initHeroSlider(); heroScroll(); initRoomsScroller(); initTour(); }
@@ -536,16 +426,14 @@ function pageHeroIntro() {
   if (!h1) return;
   const words = splitWords(h1);
   gsap.timeline()
-    .from(".page-hero .bg img", { scale: 1.3, duration: 2.2, ease: "expo.out" })
-    .from(words, { yPercent: 115, duration: 1.3, stagger: .06, ease: "expo.out" }, .1)
-    .from(".page-hero .label, .page-hero p", { y: 30, opacity: 0, duration: 1, stagger: .1, ease: "expo.out" }, .4);
+    .from(".page-hero .bg img", { scale: 1.08, duration: 1.4, ease: "power2.out" })
+    .from(words, { yPercent: 110, duration: .9, stagger: .04, ease: "power3.out" }, .1)
+    .from(".page-hero .label, .page-hero p", { y: 20, opacity: 0, duration: .8, stagger: .08, ease: "power2.out" }, .3);
 }
 
-// prepare hidden states before the curtain lifts, then play intros
+// scroll animations, then the page intro
 if (animate) {
   initScrollFx();
-  intro().then(() => { page === "home" ? heroIntro() : pageHeroIntro(); ScrollTrigger.refresh(); });
+  page === "home" ? heroIntro() : pageHeroIntro();
   window.addEventListener("load", () => ScrollTrigger.refresh());
-} else {
-  intro();
 }
