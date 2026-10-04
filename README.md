@@ -7,7 +7,7 @@ Pubblicato con GitHub Pages.
 
 | File | Contenuto |
 | --- | --- |
-| `index.html` | Home: hero, hotel, camere, ristorante, sala convegni, servizi, offerta, tour 3D |
+| `index.html` | Home: hero, hotel, camere, ristorante, sala convegni, servizi, prenotazione diretta, tour 3D |
 | `camere.html` | Le sei tipologie di camere e suite |
 | `gallery.html` | Galleria fotografica con filtri e lightbox |
 | `dove-info.html` | Contatti, modulo di richiesta, mappa |
