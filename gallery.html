@@ -3,123 +3,78 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Gallery, Hotel Royal Cosenza</title>
-  <meta name="description" content="Le foto dell'Hotel Royal di Cosenza: camere, suite, hall, bar, ristorante, sala colazione e sala convegni.">
-  <meta name="theme-color" content="#f6f5f2">
+  <title>Gallery – Hotel Royal Cosenza</title>
+  <meta name="description" content="Foto dell'Hotel Royal di Cosenza: camere, suite, hall, bar, ristorante, sala colazione e sala convegni.">
+  <meta name="theme-color" content="#12110f">
   <link rel="icon" href="img/logo_royal-color.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Marcellus&amp;family=Public+Sans:wght@400;600&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-  <header class="header">
-    <div class="wrap">
-      <a class="logo" href="index.html"><img src="img/logo_royal-color.png" alt="Hotel Royal Cosenza, quattro stelle" width="96" height="52"></a>
-      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
-      <nav class="nav" id="nav" aria-label="Menu principale">
-      <a href="camere.html">Camere</a>
-      <a href="index.html#ristorante">Ristorante</a>
-      <a href="index.html#convegni">Sala convegni</a>
-      <a href="gallery.html" aria-current="page">Gallery</a>
-      <a href="dove-info.html">Dove siamo</a>
-      <a class="nav-tel" href="tel:+390984412165">0984 412165</a>
-      <a class="btn" href="https://booking.slope.it/fa4448fa-8cdc-4372-9fef-4f1ab25cd155" target="_blank" rel="noopener">Prenota</a>
-      </nav>
-    </div>
-  </header>
-
+<body data-page="gallery">
+  <div id="site-header"></div>
   <main>
-    <div class="wrap">
-      <header class="page-head">
-        <h1>Gallery</h1>
-        <p class="intro">Camere, suite, hall, ristorante e sala convegni dell’Hotel Royal.</p>
-      </header>
-      <div class="filters" role="group" aria-label="Filtra le foto"><button type="button" data-filter="all" aria-pressed="true">Tutte</button><button type="button" data-filter="hall" aria-pressed="false">Hall e bar</button><button type="button" data-filter="camere" aria-pressed="false">Camere</button><button type="button" data-filter="suite" aria-pressed="false">Suite</button><button type="button" data-filter="ristorante" aria-pressed="false">Ristorante e colazione</button><button type="button" data-filter="convegni" aria-pressed="false">Sala convegni</button></div>
-      <div class="photos">
-        <figure data-cat="hall"><button type="button" aria-label="Ingrandisci: Hall e bar, foto 1"><img src="img/Hotel-Royal-Hall-Bar-3-1.jpg" alt="Hall e bar, foto 1" loading="lazy"></button></figure>
-        <figure data-cat="hall"><button type="button" aria-label="Ingrandisci: Hall e bar, foto 2"><img src="img/Hotel-Royal-Hall-Bar-4-1.jpg" alt="Hall e bar, foto 2" loading="lazy"></button></figure>
-        <figure data-cat="hall"><button type="button" aria-label="Ingrandisci: Hall e bar, foto 3"><img src="img/Hotel-Royal-Hall-Bar-5.jpg" alt="Hall e bar, foto 3" loading="lazy"></button></figure>
-        <figure data-cat="camere"><button type="button" aria-label="Ingrandisci: Camere, foto 1"><img src="img/GCF_0154.jpg" alt="Camere, foto 1" loading="lazy"></button></figure>
-        <figure data-cat="camere"><button type="button" aria-label="Ingrandisci: Camere, foto 2"><img src="img/Hotel-Royal-Camere-Bilocale-11.jpg" alt="Camere, foto 2" loading="lazy"></button></figure>
-        <figure data-cat="camere"><button type="button" aria-label="Ingrandisci: Camere, foto 3"><img src="img/Hotel-Royal-Camere-Bilocale-2.jpg" alt="Camere, foto 3" loading="lazy"></button></figure>
-        <figure data-cat="camere"><button type="button" aria-label="Ingrandisci: Camere, foto 4"><img src="img/Hotel-Royal-Camere-Bilocale-3.jpg" alt="Camere, foto 4" loading="lazy"></button></figure>
-        <figure data-cat="camere"><button type="button" aria-label="Ingrandisci: Camere, foto 5"><img src="img/Hotel-Royal-Camere-Bilocale-6.jpg" alt="Camere, foto 5" loading="lazy"></button></figure>
-        <figure data-cat="camere"><button type="button" aria-label="Ingrandisci: Camere, foto 6"><img src="img/Hotel-Royal-Camere-Bilocale-9.jpg" alt="Camere, foto 6" loading="lazy"></button></figure>
-        <figure data-cat="camere"><button type="button" aria-label="Ingrandisci: Camere, foto 7"><img src="img/Hotel-Royal-Camere-Matrimoniale-2-1.jpg" alt="Camere, foto 7" loading="lazy"></button></figure>
-        <figure data-cat="camere"><button type="button" aria-label="Ingrandisci: Camere, foto 8"><img src="img/Hotel-Royal-Camere-Matrimoniale-2.jpg" alt="Camere, foto 8" loading="lazy"></button></figure>
-        <figure data-cat="camere"><button type="button" aria-label="Ingrandisci: Camere, foto 9"><img src="img/Hotel-Royal-Camere-Matrimoniale-3-1.jpg" alt="Camere, foto 9" loading="lazy"></button></figure>
-        <figure data-cat="camere"><button type="button" aria-label="Ingrandisci: Camere, foto 10"><img src="img/Hotel-Royal-Camere-Matrimoniale-6.jpg" alt="Camere, foto 10" loading="lazy"></button></figure>
-        <figure data-cat="camere"><button type="button" aria-label="Ingrandisci: Camere, foto 11"><img src="img/Hotel-Royal-Camere-Tripla-2-1.jpg" alt="Camere, foto 11" loading="lazy"></button></figure>
-        <figure data-cat="camere"><button type="button" aria-label="Ingrandisci: Camere, foto 12"><img src="img/Hotel-Royal-Camere-Tripla-3.jpg" alt="Camere, foto 12" loading="lazy"></button></figure>
-        <figure data-cat="camere"><button type="button" aria-label="Ingrandisci: Camere, foto 13"><img src="img/Hotel-Royal-Camere-Tripla-4-1.jpg" alt="Camere, foto 13" loading="lazy"></button></figure>
-        <figure data-cat="camere"><button type="button" aria-label="Ingrandisci: Camere, foto 14"><img src="img/Hotel-Royal-Camere-Tripla-4-2.jpg" alt="Camere, foto 14" loading="lazy"></button></figure>
-        <figure data-cat="camere"><button type="button" aria-label="Ingrandisci: Camere, foto 15"><img src="img/Hotel-Royal-Dettagli-8.jpg" alt="Camere, foto 15" loading="lazy"></button></figure>
-        <figure data-cat="suite"><button type="button" aria-label="Ingrandisci: Suite, foto 1"><img src="img/GCF_0015.jpg" alt="Suite, foto 1" loading="lazy"></button></figure>
-        <figure data-cat="suite"><button type="button" aria-label="Ingrandisci: Suite, foto 2"><img src="img/GCF_0040.jpg" alt="Suite, foto 2" loading="lazy"></button></figure>
-        <figure data-cat="suite"><button type="button" aria-label="Ingrandisci: Suite, foto 3"><img src="img/GCF_0046.jpg" alt="Suite, foto 3" loading="lazy"></button></figure>
-        <figure data-cat="suite"><button type="button" aria-label="Ingrandisci: Suite, foto 4"><img src="img/GCF_0374.jpg" alt="Suite, foto 4" loading="lazy"></button></figure>
-        <figure data-cat="suite"><button type="button" aria-label="Ingrandisci: Suite, foto 5"><img src="img/GCF_0383.jpg" alt="Suite, foto 5" loading="lazy"></button></figure>
-        <figure data-cat="suite"><button type="button" aria-label="Ingrandisci: Suite, foto 6"><img src="img/GCF_0395.jpg" alt="Suite, foto 6" loading="lazy"></button></figure>
-        <figure data-cat="ristorante"><button type="button" aria-label="Ingrandisci: Ristorante e colazione, foto 1"><img src="img/Hotel-Royal-Sala-Colazione-e-Buffet-11.jpg" alt="Ristorante e colazione, foto 1" loading="lazy"></button></figure>
-        <figure data-cat="ristorante"><button type="button" aria-label="Ingrandisci: Ristorante e colazione, foto 2"><img src="img/Hotel-Royal-Sala-Colazione-e-Buffet-2.jpg" alt="Ristorante e colazione, foto 2" loading="lazy"></button></figure>
-        <figure data-cat="ristorante"><button type="button" aria-label="Ingrandisci: Ristorante e colazione, foto 3"><img src="img/Hotel-Royal-Sala-Colazione-e-Buffet-3.jpg" alt="Ristorante e colazione, foto 3" loading="lazy"></button></figure>
-        <figure data-cat="ristorante"><button type="button" aria-label="Ingrandisci: Ristorante e colazione, foto 4"><img src="img/Hotel-Royal-Sala-Colazione-e-Buffet-4.jpg" alt="Ristorante e colazione, foto 4" loading="lazy"></button></figure>
-        <figure data-cat="ristorante"><button type="button" aria-label="Ingrandisci: Ristorante e colazione, foto 5"><img src="img/Hotel-Royal-Sala-Colazione-e-Buffet-5.jpg" alt="Ristorante e colazione, foto 5" loading="lazy"></button></figure>
-        <figure data-cat="ristorante"><button type="button" aria-label="Ingrandisci: Ristorante e colazione, foto 6"><img src="img/Hotel-Royal-Sala-Colazione-e-Buffet-7.jpg" alt="Ristorante e colazione, foto 6" loading="lazy"></button></figure>
-        <figure data-cat="ristorante"><button type="button" aria-label="Ingrandisci: Ristorante e colazione, foto 7"><img src="img/Hotel-Royal-Sala-Colazione-e-Buffet-9.jpg" alt="Ristorante e colazione, foto 7" loading="lazy"></button></figure>
-        <figure data-cat="ristorante"><button type="button" aria-label="Ingrandisci: Ristorante e colazione, foto 8"><img src="img/Hotel-Royal-Sala-Ristorante-1.jpg" alt="Ristorante e colazione, foto 8" loading="lazy"></button></figure>
-        <figure data-cat="ristorante"><button type="button" aria-label="Ingrandisci: Ristorante e colazione, foto 9"><img src="img/Hotel-Royal-Sala-Ristorante-2.jpg" alt="Ristorante e colazione, foto 9" loading="lazy"></button></figure>
-        <figure data-cat="ristorante"><button type="button" aria-label="Ingrandisci: Ristorante e colazione, foto 10"><img src="img/Hotel-Royal-Sala-Ristorante-3.jpg" alt="Ristorante e colazione, foto 10" loading="lazy"></button></figure>
-        <figure data-cat="convegni"><button type="button" aria-label="Ingrandisci: Sala convegni, foto 1"><img src="img/Hotel-Royal-Sala-Convegni-1.jpg" alt="Sala convegni, foto 1" loading="lazy"></button></figure>
-        <figure data-cat="convegni"><button type="button" aria-label="Ingrandisci: Sala convegni, foto 2"><img src="img/Hotel-Royal-Sala-Convegni-2.jpg" alt="Sala convegni, foto 2" loading="lazy"></button></figure>
-        <figure data-cat="convegni"><button type="button" aria-label="Ingrandisci: Sala convegni, foto 3"><img src="img/Hotel-Royal-Sala-Convegni-3.jpg" alt="Sala convegni, foto 3" loading="lazy"></button></figure>
-        <figure data-cat="convegni"><button type="button" aria-label="Ingrandisci: Sala convegni, foto 4"><img src="img/Hotel-Royal-Sala-Convegni-4.jpg" alt="Sala convegni, foto 4" loading="lazy"></button></figure>
+    <header class="page-hero">
+      <div class="bg"><img src="img/Hotel-Royal-Hall-Bar-3-1.jpg" alt="" data-parallax="0.2"></div>
+      <div class="wrap">
+        <div>
+          <span class="label">Gallery</span>
+          <h1 class="display h-xl">L’hotel <span class="it gold">in immagini</span></h1>
+        </div>
+        <p>38 scatti tra camere, suite, ristorante e sale.</p>
       </div>
-    </div>
-    <div class="band"></div>
+    </header>
+    <section class="section" style="padding-top:5rem">
+      <div class="wrap">
+        <div class="filters"><button data-filter="all" class="active">Tutte</button><button data-filter="hall">Hall &amp; Bar</button><button data-filter="camere">Camere</button><button data-filter="suite">Suite</button><button data-filter="ristorante">Ristorante</button><button data-filter="convegni">Convegni</button></div>
+        <div class="g-grid">
+        <figure class="g-item" data-cat="hall"><img src="img/Hotel-Royal-Hall-Bar-3-1.jpg" alt="Hotel Royal Cosenza – Hall e Bar" data-lb="gallery" loading="lazy"><figcaption>Hall &amp; Bar</figcaption></figure>
+        <figure class="g-item" data-cat="hall"><img src="img/Hotel-Royal-Hall-Bar-4-1.jpg" alt="Hotel Royal Cosenza – Hall e Bar" data-lb="gallery" loading="lazy"><figcaption>Hall &amp; Bar</figcaption></figure>
+        <figure class="g-item" data-cat="hall"><img src="img/Hotel-Royal-Hall-Bar-5.jpg" alt="Hotel Royal Cosenza – Hall e Bar" data-lb="gallery" loading="lazy"><figcaption>Hall &amp; Bar</figcaption></figure>
+        <figure class="g-item" data-cat="camere"><img src="img/GCF_0154.jpg" alt="Hotel Royal Cosenza – Camere" data-lb="gallery" loading="lazy"><figcaption>Camere</figcaption></figure>
+        <figure class="g-item" data-cat="camere"><img src="img/Hotel-Royal-Camere-Bilocale-11.jpg" alt="Hotel Royal Cosenza – Camere" data-lb="gallery" loading="lazy"><figcaption>Camere</figcaption></figure>
+        <figure class="g-item" data-cat="camere"><img src="img/Hotel-Royal-Camere-Bilocale-2.jpg" alt="Hotel Royal Cosenza – Camere" data-lb="gallery" loading="lazy"><figcaption>Camere</figcaption></figure>
+        <figure class="g-item" data-cat="camere"><img src="img/Hotel-Royal-Camere-Bilocale-3.jpg" alt="Hotel Royal Cosenza – Camere" data-lb="gallery" loading="lazy"><figcaption>Camere</figcaption></figure>
+        <figure class="g-item" data-cat="camere"><img src="img/Hotel-Royal-Camere-Bilocale-6.jpg" alt="Hotel Royal Cosenza – Camere" data-lb="gallery" loading="lazy"><figcaption>Camere</figcaption></figure>
+        <figure class="g-item" data-cat="camere"><img src="img/Hotel-Royal-Camere-Bilocale-9.jpg" alt="Hotel Royal Cosenza – Camere" data-lb="gallery" loading="lazy"><figcaption>Camere</figcaption></figure>
+        <figure class="g-item" data-cat="camere"><img src="img/Hotel-Royal-Camere-Matrimoniale-2-1.jpg" alt="Hotel Royal Cosenza – Camere" data-lb="gallery" loading="lazy"><figcaption>Camere</figcaption></figure>
+        <figure class="g-item" data-cat="camere"><img src="img/Hotel-Royal-Camere-Matrimoniale-2.jpg" alt="Hotel Royal Cosenza – Camere" data-lb="gallery" loading="lazy"><figcaption>Camere</figcaption></figure>
+        <figure class="g-item" data-cat="camere"><img src="img/Hotel-Royal-Camere-Matrimoniale-3-1.jpg" alt="Hotel Royal Cosenza – Camere" data-lb="gallery" loading="lazy"><figcaption>Camere</figcaption></figure>
+        <figure class="g-item" data-cat="camere"><img src="img/Hotel-Royal-Camere-Matrimoniale-6.jpg" alt="Hotel Royal Cosenza – Camere" data-lb="gallery" loading="lazy"><figcaption>Camere</figcaption></figure>
+        <figure class="g-item" data-cat="camere"><img src="img/Hotel-Royal-Camere-Tripla-2-1.jpg" alt="Hotel Royal Cosenza – Camere" data-lb="gallery" loading="lazy"><figcaption>Camere</figcaption></figure>
+        <figure class="g-item" data-cat="camere"><img src="img/Hotel-Royal-Camere-Tripla-3.jpg" alt="Hotel Royal Cosenza – Camere" data-lb="gallery" loading="lazy"><figcaption>Camere</figcaption></figure>
+        <figure class="g-item" data-cat="camere"><img src="img/Hotel-Royal-Camere-Tripla-4-1.jpg" alt="Hotel Royal Cosenza – Camere" data-lb="gallery" loading="lazy"><figcaption>Camere</figcaption></figure>
+        <figure class="g-item" data-cat="camere"><img src="img/Hotel-Royal-Camere-Tripla-4-2.jpg" alt="Hotel Royal Cosenza – Camere" data-lb="gallery" loading="lazy"><figcaption>Camere</figcaption></figure>
+        <figure class="g-item" data-cat="camere"><img src="img/Hotel-Royal-Dettagli-8.jpg" alt="Hotel Royal Cosenza – Camere" data-lb="gallery" loading="lazy"><figcaption>Camere</figcaption></figure>
+        <figure class="g-item" data-cat="suite"><img src="img/GCF_0015.jpg" alt="Hotel Royal Cosenza – Suite" data-lb="gallery" loading="lazy"><figcaption>Suite</figcaption></figure>
+        <figure class="g-item" data-cat="suite"><img src="img/GCF_0040.jpg" alt="Hotel Royal Cosenza – Suite" data-lb="gallery" loading="lazy"><figcaption>Suite</figcaption></figure>
+        <figure class="g-item" data-cat="suite"><img src="img/GCF_0046.jpg" alt="Hotel Royal Cosenza – Suite" data-lb="gallery" loading="lazy"><figcaption>Suite</figcaption></figure>
+        <figure class="g-item" data-cat="suite"><img src="img/GCF_0374.jpg" alt="Hotel Royal Cosenza – Suite" data-lb="gallery" loading="lazy"><figcaption>Suite</figcaption></figure>
+        <figure class="g-item" data-cat="suite"><img src="img/GCF_0383.jpg" alt="Hotel Royal Cosenza – Suite" data-lb="gallery" loading="lazy"><figcaption>Suite</figcaption></figure>
+        <figure class="g-item" data-cat="suite"><img src="img/GCF_0395.jpg" alt="Hotel Royal Cosenza – Suite" data-lb="gallery" loading="lazy"><figcaption>Suite</figcaption></figure>
+        <figure class="g-item" data-cat="ristorante"><img src="img/Hotel-Royal-Sala-Colazione-e-Buffet-11.jpg" alt="Hotel Royal Cosenza – Ristorante" data-lb="gallery" loading="lazy"><figcaption>Ristorante</figcaption></figure>
+        <figure class="g-item" data-cat="ristorante"><img src="img/Hotel-Royal-Sala-Colazione-e-Buffet-2.jpg" alt="Hotel Royal Cosenza – Ristorante" data-lb="gallery" loading="lazy"><figcaption>Ristorante</figcaption></figure>
+        <figure class="g-item" data-cat="ristorante"><img src="img/Hotel-Royal-Sala-Colazione-e-Buffet-3.jpg" alt="Hotel Royal Cosenza – Ristorante" data-lb="gallery" loading="lazy"><figcaption>Ristorante</figcaption></figure>
+        <figure class="g-item" data-cat="ristorante"><img src="img/Hotel-Royal-Sala-Colazione-e-Buffet-4.jpg" alt="Hotel Royal Cosenza – Ristorante" data-lb="gallery" loading="lazy"><figcaption>Ristorante</figcaption></figure>
+        <figure class="g-item" data-cat="ristorante"><img src="img/Hotel-Royal-Sala-Colazione-e-Buffet-5.jpg" alt="Hotel Royal Cosenza – Ristorante" data-lb="gallery" loading="lazy"><figcaption>Ristorante</figcaption></figure>
+        <figure class="g-item" data-cat="ristorante"><img src="img/Hotel-Royal-Sala-Colazione-e-Buffet-7.jpg" alt="Hotel Royal Cosenza – Ristorante" data-lb="gallery" loading="lazy"><figcaption>Ristorante</figcaption></figure>
+        <figure class="g-item" data-cat="ristorante"><img src="img/Hotel-Royal-Sala-Colazione-e-Buffet-9.jpg" alt="Hotel Royal Cosenza – Ristorante" data-lb="gallery" loading="lazy"><figcaption>Ristorante</figcaption></figure>
+        <figure class="g-item" data-cat="ristorante"><img src="img/Hotel-Royal-Sala-Ristorante-1.jpg" alt="Hotel Royal Cosenza – Ristorante" data-lb="gallery" loading="lazy"><figcaption>Ristorante</figcaption></figure>
+        <figure class="g-item" data-cat="ristorante"><img src="img/Hotel-Royal-Sala-Ristorante-2.jpg" alt="Hotel Royal Cosenza – Ristorante" data-lb="gallery" loading="lazy"><figcaption>Ristorante</figcaption></figure>
+        <figure class="g-item" data-cat="ristorante"><img src="img/Hotel-Royal-Sala-Ristorante-3.jpg" alt="Hotel Royal Cosenza – Ristorante" data-lb="gallery" loading="lazy"><figcaption>Ristorante</figcaption></figure>
+        <figure class="g-item" data-cat="convegni"><img src="img/Hotel-Royal-Sala-Convegni-1.jpg" alt="Hotel Royal Cosenza – Convegni" data-lb="gallery" loading="lazy"><figcaption>Convegni</figcaption></figure>
+        <figure class="g-item" data-cat="convegni"><img src="img/Hotel-Royal-Sala-Convegni-2.jpg" alt="Hotel Royal Cosenza – Convegni" data-lb="gallery" loading="lazy"><figcaption>Convegni</figcaption></figure>
+        <figure class="g-item" data-cat="convegni"><img src="img/Hotel-Royal-Sala-Convegni-3.jpg" alt="Hotel Royal Cosenza – Convegni" data-lb="gallery" loading="lazy"><figcaption>Convegni</figcaption></figure>
+        <figure class="g-item" data-cat="convegni"><img src="img/Hotel-Royal-Sala-Convegni-4.jpg" alt="Hotel Royal Cosenza – Convegni" data-lb="gallery" loading="lazy"><figcaption>Convegni</figcaption></figure>
+        </div>
+      </div>
+    </section>
   </main>
-
-  <footer class="footer">
-    <div class="wrap">
-      <div class="footer-top">
-        <div>
-          <img src="img/logo_royal-white.png" alt="Hotel Royal Cosenza" width="118" height="64">
-          <p>Hotel quattro stelle nel centro di Cosenza, a pochi passi dal MAB, da Corso Mazzini e dal Duomo.</p>
-        </div>
-        <div>
-          <h2>Contatti</h2>
-          <ul>
-            <li>Via delle Medaglie d'Oro, 87100 Cosenza</li>
-            <li><a href="tel:+390984412165">Telefono e fax 0984 412165</a></li>
-            <li><a href="https://wa.me/393760412155" target="_blank" rel="noopener">WhatsApp 376 041 2155</a></li>
-            <li><a href="mailto:direzione@hotelroyalsas.it">direzione@hotelroyalsas.it</a></li>
-          </ul>
-        </div>
-        <div>
-          <h2>Prenotazioni</h2>
-          <ul>
-            <li><a href="https://booking.slope.it/fa4448fa-8cdc-4372-9fef-4f1ab25cd155" target="_blank" rel="noopener">Verifica disponibilità</a></li>
-            <li><a href="https://booking.slope.it/fa4448fa-8cdc-4372-9fef-4f1ab25cd155/quote-request" target="_blank" rel="noopener">Richiedi un preventivo</a></li>
-            <li><a href="https://my.matterport.com/show/?m=qAsuZwDXsB5" target="_blank" rel="noopener">Tour virtuale 3D</a></li>
-          </ul>
-        </div>
-        <div>
-          <h2>Il sito</h2>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="camere.html">Camere</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="dove-info.html">Dove siamo</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-legal">
-        <span>Hotel Royal Cosenza, P.IVA 01612120780</span>
-        <span>Codice regionale 078045-ALB-00004, CIN IT078045A1EGHN33YP</span>
-      </div>
-    </div>
-  </footer>
+  <div id="site-footer"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Flip.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

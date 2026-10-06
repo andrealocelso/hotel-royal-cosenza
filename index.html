@@ -3,206 +3,258 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hotel Royal Cosenza, hotel quattro stelle in centro</title>
-  <meta name="description" content="Hotel Royal, quattro stelle nel centro di Cosenza, a pochi passi dal MAB, da Corso Mazzini e dal Duomo. Garage interno, sala convegni, ristorante, Wi-Fi in fibra.">
-  <meta name="theme-color" content="#f6f5f2">
+  <title>Hotel Royal Cosenza – Hotel 4 stelle nel cuore della città</title>
+  <meta name="description" content="Hotel Royal, albergo 4 stelle nel cuore di Cosenza, a pochi passi dal MAB, Corso Mazzini e Duomo. Garage interno, sala convegni, ristorante, Wi-Fi in fibra.">
+  <meta name="theme-color" content="#12110f">
   <link rel="icon" href="img/logo_royal-color.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Marcellus&amp;family=Public+Sans:wght@400;600&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-  <header class="header">
-    <div class="wrap">
-      <a class="logo" href="index.html"><img src="img/logo_royal-color.png" alt="Hotel Royal Cosenza, quattro stelle" width="96" height="52"></a>
-      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
-      <nav class="nav" id="nav" aria-label="Menu principale">
-      <a href="camere.html">Camere</a>
-      <a href="index.html#ristorante">Ristorante</a>
-      <a href="index.html#convegni">Sala convegni</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="dove-info.html">Dove siamo</a>
-      <a class="nav-tel" href="tel:+390984412165">0984 412165</a>
-      <a class="btn" href="https://booking.slope.it/fa4448fa-8cdc-4372-9fef-4f1ab25cd155" target="_blank" rel="noopener">Prenota</a>
-      </nav>
-    </div>
-  </header>
+<body data-page="home">
+
+  <div id="site-header"></div>
 
   <main>
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="wrap">
-        <div>
-          <h1 id="hero-title" class="sr-only">Hotel Royal Cosenza, hotel quattro stelle nel centro di Cosenza</h1>
-          <form id="stay" aria-label="Verifica disponibilità">
-            <p class="stay">
-              <span class="stay-line">Dal <label class="pick"><span id="checkin-text">giorno di arrivo</span><input type="date" name="checkin" aria-label="Data di arrivo" required></label></span>
-              <span class="stay-line">al <label class="pick"><span id="checkout-text">giorno di partenza</span><input type="date" name="checkout" aria-label="Data di partenza" required></label></span>
-              <span class="stay-line">a Cosenza.</span>
-            </p>
-            <p class="guests">Per
-              <select class="inline-select" name="adulti" aria-label="Adulti"><option value="1">1 adulto</option><option value="2" selected>2 adulti</option><option value="3">3 adulti</option><option value="4">4 adulti</option><option value="5">5 adulti</option></select>
-              e
-              <select class="inline-select" name="bambini" aria-label="Bambini da 0 a 13 anni"><option value="0">nessun bambino</option><option value="1">1 bambino</option><option value="2">2 bambini</option><option value="3">3 bambini</option></select>.
-            </p>
-            <div class="btn-row">
-              <button class="btn" type="submit">Verifica disponibilità</button>
-              <a class="btn btn-line" href="https://booking.slope.it/fa4448fa-8cdc-4372-9fef-4f1ab25cd155/quote-request" target="_blank" rel="noopener">Richiedi un preventivo</a>
-            </div>
-            <p class="hero-note">Prenoti direttamente con l’hotel. Per gruppi, eventi e soggiorni lunghi conviene il preventivo.</p>
-          </form>
-        </div>
-        <figure class="hero-photo">
-          <img src="img/GCF_0015.jpg" alt="La Suite Relax dell’Hotel Royal" width="1536" height="1024" fetchpriority="high">
-        </figure>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-media">
+        <div class="slide" style="background-image:url(img/GCF_0015.jpg)"></div>
+        <div class="slide" style="background-image:url(img/Hotel-Royal-Hall-Bar-4-1.jpg)"></div>
+        <div class="slide" style="background-image:url(img/Hotel-Royal-Camere-Matrimoniale-2.jpg)"></div>
+        <div class="slide" style="background-image:url(img/Hotel-Royal-Sala-Ristorante-1.jpg)"></div>
+        <div class="slide" style="background-image:url(img/GCF_0040.jpg)"></div>
       </div>
+      <div class="wrap hero-content">
+        <div class="hero-top"><span class="stars">★★★★</span><span>Hotel · Cosenza · Calabria</span></div>
+        <h1 class="display"><span class="split-line"><span class="hl">Royal</span></span><span class="split-line"><span class="hl it">Cosenza</span></span></h1>
+        <div class="hero-sub">
+          <p>L’hotel nel cuore della città. Per lavoro o per svago.</p>
+          <a class="btn btn-line" href="https://my.matterport.com/show/?m=qAsuZwDXsB5&sr=-.16,.68&ss=196" target="_blank" rel="noopener">Tour 3D Suite Relax ↗</a>
+        </div>
+      </div>
+      <div class="booking">
+        <form class="booking-form">
+          <label>Check-in <input type="date" name="checkin" required></label>
+          <label>Check-out <input type="date" name="checkout" required></label>
+          <label>Adulti <select name="adulti"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option></select></label>
+          <label>Bambini <select name="bambini"><option>0</option><option>1</option><option>2</option><option>3</option></select></label>
+          <button class="btn btn-gold" type="submit">Verifica <svg class="arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 8h14M9 2l6 6-6 6"/></svg></button>
+        </form>
+      </div>
+      <div class="hero-progress"></div>
+      <div class="hero-scroll">Scroll</div>
     </section>
 
-    <section class="band" id="hotel" aria-labelledby="hotel-title">
-      <div class="wrap hotel">
-        <div class="hotel-photos">
-          <img src="img/Hotel-Royal-Hall-Bar-3-1.jpg" alt="La hall dell’hotel con le pareti rosse e il lampadario" loading="lazy">
-          <img src="img/Hotel-Royal-Hall-Bar-4-1.jpg" alt="Il salotto della hall" loading="lazy">
-          <img src="img/Hotel-Royal-Hall-Bar-5.jpg" alt="Il bar lounge" loading="lazy">
-        </div>
-        <div>
-          <h2 id="hotel-title">Un quattro stelle nel centro di Cosenza</h2>
-          <p>Il Royal Hotel si trova nel cuore di Cosenza, a pochi passi dal MAB, il museo all’aperto Bilotti, da Corso Mazzini e dal Duomo.</p>
-          <p>È comodo per chi viaggia per lavoro e cerca una struttura efficiente con parcheggio interno, e per chi viene a scoprire il centro storico e le bellezze architettoniche della città.</p>
-          <dl class="facts">
-            <div><dt>Parcheggio</dt><dd>Garage con accesso diretto in hotel, riservato agli ospiti</dd></div>
-            <div><dt>Connessione</dt><dd>Internet in fibra in tutta la struttura</dd></div>
-            <div><dt>Colazione</dt><dd>A buffet, nella sala colazione</dd></div>
-            <div><dt>Ristorante</dt><dd>Pranzo e cena con menù à la carte</dd></div>
-            <div><dt>Bar</dt><dd>Bar lounge nella hall</dd></div>
-            <div><dt>Arrivo e partenza</dt><dd>Check-in e check-out express</dd></div>
-            <div><dt>Sale</dt><dd>Sala convegni da 150 mq e sale minori espositive e multimediali</dd></div>
-          </dl>
-        </div>
-      </div>
-    </section>
-
-    <section class="band band-white" aria-labelledby="camere-title">
-      <div class="wrap">
-        <div class="head">
-          <h2 id="camere-title">Camere e suite</h2>
-          <p>Tutte con bagno privato, aria condizionata, TV, minifrigo, cassaforte, asciugacapelli, Wi-Fi gratuito e kit di cortesia.</p>
-        </div>
-        <ul class="room-grid">
-          <li><a href="camere.html#standard">
-            <img src="img/Hotel-Royal-Camere-Tripla-3.jpg" alt="" loading="lazy" width="1536" height="1025">
-            <h3>Camera Standard</h3>
-            <p>Comoda e pratica, per chi viaggia per lavoro.</p>
-          </a></li>
-          <li><a href="camere.html#superior-matrimoniale">
-            <img src="img/GCF_0154.jpg" alt="" loading="lazy" width="1536" height="1025">
-            <h3>Superior Matrimoniale</h3>
-            <p>Letto matrimoniale e spazi più ampi.</p>
-          </a></li>
-          <li><a href="camere.html#superior-tripla">
-            <img src="img/Hotel-Royal-Camere-Tripla-2-1.jpg" alt="" loading="lazy" width="1536" height="1025">
-            <h3>Superior Tripla</h3>
-            <p>Fino a tre ospiti.</p>
-          </a></li>
-          <li><a href="camere.html#family">
-            <img src="img/Hotel-Royal-Camere-Bilocale-3.jpg" alt="" loading="lazy" width="1536" height="1025">
-            <h3>Camera Family</h3>
-            <p>Più ambienti, pensata per le famiglie.</p>
-          </a></li>
-          <li><a href="camere.html#suite-angolo-cottura">
-            <img src="img/GCF_0395.jpg" alt="" loading="lazy" width="1536" height="1025">
-            <h3>Suite con angolo cottura</h3>
-            <p>Per i soggiorni più lunghi.</p>
-          </a></li>
-          <li><a href="camere.html#suite-relax">
-            <img src="img/GCF_0046.jpg" alt="" loading="lazy" width="1536" height="1025">
-            <h3>Suite Relax</h3>
-            <p>La nostra suite più esclusiva.</p>
-          </a></li>
-        </ul>
-        <div class="btn-row"><a class="btn btn-line" href="camere.html">Vedi tutte le camere</a></div>
-      </div>
-    </section>
-
-    <section class="band" id="ristorante" aria-labelledby="ristorante-title">
-      <div class="wrap split">
-        <div>
-          <h2 id="ristorante-title">Ristorante e colazione</h2>
-          <p>La cucina propone piatti della tradizione calabrese e nazionale, preparati con cura.</p>
-          <p>La colazione è a buffet. A pranzo e a cena il servizio è al tavolo, con menù à la carte.</p>
-        </div>
-        <div class="pair">
-          <img src="img/Hotel-Royal-Sala-Ristorante-2.jpg" alt="La sala del ristorante apparecchiata" loading="lazy">
-          <img src="img/Hotel-Royal-Sala-Colazione-e-Buffet-3.jpg" alt="Il buffet della colazione" loading="lazy">
-        </div>
-      </div>
-    </section>
-
-    <section class="band band-dark" id="convegni" aria-labelledby="convegni-title">
-      <div class="wrap meeting">
-        <img src="img/Hotel-Royal-Sala-Convegni-2.jpg" alt="La sala convegni allestita con file di sedie" loading="lazy">
-        <div>
-          <h2 id="convegni-title">Sala convegni</h2>
-          <p>Ospita ogni anno alcuni dei meeting e degli eventi più importanti di Cosenza. Si adatta al numero di partecipanti, e per incontri ricorrenti e pranzi di lavoro si possono concordare convenzioni.</p>
-          <dl class="facts">
-            <div><dt>Superficie</dt><dd>150 mq</dd></div>
-            <div><dt>Capienza</dt><dd>Fino a 100 persone</dd></div>
-            <div><dt>Attrezzature</dt><dd>Videoproiettore, impianto audio, microfono, Wi-Fi, lavagna mobile</dd></div>
-          </dl>
-          <div class="btn-row"><a class="btn" href="https://booking.slope.it/fa4448fa-8cdc-4372-9fef-4f1ab25cd155/quote-request" target="_blank" rel="noopener">Richiedi un preventivo</a></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="tour" style="background-image:url(img/GCF_0040.jpg)" aria-labelledby="tour-title">
-      <div class="wrap">
-        <h2 id="tour-title">Visita l’hotel prima di arrivare</h2>
-        <p>Il tour virtuale 3D ti porta nelle suite e negli spazi comuni.</p>
-        <div class="btn-row"><a class="btn btn-line" href="https://my.matterport.com/show/?m=qAsuZwDXsB5" target="_blank" rel="noopener">Apri il tour virtuale</a></div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="wrap">
-      <div class="footer-top">
-        <div>
-          <img src="img/logo_royal-white.png" alt="Hotel Royal Cosenza" width="118" height="64">
-          <p>Hotel quattro stelle nel centro di Cosenza, a pochi passi dal MAB, da Corso Mazzini e dal Duomo.</p>
-        </div>
-        <div>
-          <h2>Contatti</h2>
-          <ul>
-            <li>Via delle Medaglie d'Oro, 87100 Cosenza</li>
-            <li><a href="tel:+390984412165">Telefono e fax 0984 412165</a></li>
-            <li><a href="https://wa.me/393760412155" target="_blank" rel="noopener">WhatsApp 376 041 2155</a></li>
-            <li><a href="mailto:direzione@hotelroyalsas.it">direzione@hotelroyalsas.it</a></li>
-          </ul>
-        </div>
-        <div>
-          <h2>Prenotazioni</h2>
-          <ul>
-            <li><a href="https://booking.slope.it/fa4448fa-8cdc-4372-9fef-4f1ab25cd155" target="_blank" rel="noopener">Verifica disponibilità</a></li>
-            <li><a href="https://booking.slope.it/fa4448fa-8cdc-4372-9fef-4f1ab25cd155/quote-request" target="_blank" rel="noopener">Richiedi un preventivo</a></li>
-            <li><a href="https://my.matterport.com/show/?m=qAsuZwDXsB5" target="_blank" rel="noopener">Tour virtuale 3D</a></li>
-          </ul>
-        </div>
-        <div>
-          <h2>Il sito</h2>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="camere.html">Camere</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="dove-info.html">Dove siamo</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-legal">
-        <span>Hotel Royal Cosenza, P.IVA 01612120780</span>
-        <span>Codice regionale 078045-ALB-00004, CIN IT078045A1EGHN33YP</span>
+    <div class="booking-mobile">
+      <div class="booking">
+        <form class="booking-form">
+          <label>Check-in <input type="date" name="checkin" required></label>
+          <label>Check-out <input type="date" name="checkout" required></label>
+          <label>Adulti <select name="adulti"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option></select></label>
+          <label>Bambini <select name="bambini"><option>0</option><option>1</option><option>2</option><option>3</option></select></label>
+          <button class="btn btn-gold" type="submit">Verifica disponibilità</button>
+        </form>
       </div>
     </div>
-  </footer>
+
+    <!-- MANIFESTO -->
+    <section class="section manifesto">
+      <div class="wrap">
+        <span class="label">Hotel 4★ nel centro di Cosenza</span>
+        <p class="big" data-scrub-words>Nel cuore di Cosenza, a pochi passi dal MAB, da Corso Mazzini e dal Duomo: un quattro stelle pensato per chi viaggia per lavoro e per chi si lascia sedurre dalla città.</p>
+        <div class="row">
+          <p data-fade>Ideale per i viaggiatori business, che hanno bisogno di una struttura efficiente, comoda e con parcheggio interno, e per i viaggiatori leisure, attratti dal fascino del centro storico e dalle bellezze architettoniche della città.</p>
+          <div data-fade=".15"><a class="btn btn-line" href="https://my.matterport.com/show/?m=qAsuZwDXsB5" target="_blank" rel="noopener">Virtual Tour 3D ↗</a></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Corso Mazzini</span><span class="out">MAB · Museo Bilotti</span><span>Duomo di Cosenza</span><span class="out">Centro storico</span>
+        <span>Corso Mazzini</span><span class="out">MAB · Museo Bilotti</span><span>Duomo di Cosenza</span><span class="out">Centro storico</span>
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section class="section light" id="hotel">
+      <div class="wrap about">
+        <div class="about-media">
+          <figure class="f1" data-reveal><img src="img/Hotel-Royal-Hall-Bar-3-1.jpg" alt="Hall dell'Hotel Royal Cosenza" data-parallax="0.15"></figure>
+          <figure class="f2" data-reveal><img src="img/Hotel-Royal-Hall-Bar-5.jpg" alt="Bar lounge" data-parallax="0.2"></figure>
+          <div class="badge" aria-hidden="true">
+            <svg viewBox="0 0 132 132"><defs><path id="circ" d="M66,66 m-52,0 a52,52 0 1,1 104,0 a52,52 0 1,1 -104,0"/></defs><text><textPath href="#circ">Hotel Royal · Cosenza · Dal cuore della città ·</textPath></text></svg>
+            <b>4★</b>
+          </div>
+        </div>
+        <div>
+          <span class="label">L’hotel</span>
+          <h2 class="display h-lg" data-split>Il comfort di un <span class="it">quattro stelle</span></h2>
+          <p class="lead" data-fade>Il Royal Hotel dispone di un’ampia sala conferenze, sale minori espositive e multimediali, garage con accesso diretto in hotel dedicato agli ospiti, sala colazione e bar/lounge.</p>
+          <p class="lead" data-fade>Connessione internet in fibra, veloce ed efficiente in tutta la struttura, ideale per il lavoro e per i servizi multimediali. Aria condizionata, servizi privati e TV digitale terrestre.</p>
+          <div class="stats">
+            <div><strong data-count="150" data-suffix=" mq">150 mq</strong><span>Sala convegni</span></div>
+            <div><strong data-count="100">100</strong><span>Posti in sala</span></div>
+            <div><strong data-count="6">6</strong><span>Tipologie di camere</span></div>
+          </div>
+          <a class="btn btn-dark" href="camere.html">Scopri le camere <svg class="arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 8h14M9 2l6 6-6 6"/></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ROOMS HORIZONTAL -->
+    <section class="section rooms">
+      <div class="wrap rooms-head">
+        <div>
+          <span class="label">Camere & Suite</span>
+          <h2 class="display h-lg" data-split>Luoghi unici, <span class="it gold">tutti da vivere</span></h2>
+        </div>
+        <div class="counter"><b>01</b> / 06</div>
+      </div>
+      <div class="rooms-track">
+        <a class="room" href="camere.html#standard"><div class="ph"><span class="num">01</span><img src="img/Hotel-Royal-Camere-Tripla-3.jpg" alt="Camera Standard" loading="lazy"></div><div class="meta"><h3>Standard</h3><small>Business</small></div></a>
+        <a class="room" href="camere.html#superior-matrimoniale"><div class="ph"><span class="num">02</span><img src="img/GCF_0154.jpg" alt="Camera Superior Matrimoniale" loading="lazy"></div><div class="meta"><h3>Superior Matrimoniale</h3><small>Coppie</small></div></a>
+        <a class="room" href="camere.html#superior-triple"><div class="ph"><span class="num">03</span><img src="img/Hotel-Royal-Camere-Tripla-2-1.jpg" alt="Camera Superior Tripla" loading="lazy"></div><div class="meta"><h3>Superior Tripla</h3><small>3 ospiti</small></div></a>
+        <a class="room" href="camere.html#family"><div class="ph"><span class="num">04</span><img src="img/Hotel-Royal-Camere-Bilocale-3.jpg" alt="Camera Family" loading="lazy"></div><div class="meta"><h3>Family</h3><small>Famiglie</small></div></a>
+        <a class="room" href="camere.html#suite-angolo-cottura"><div class="ph"><span class="num">05</span><span class="tour-tag">Tour 3D</span><img src="img/GCF_0395.jpg" alt="Suite con angolo cottura" loading="lazy"></div><div class="meta"><h3>Suite Angolo Cottura</h3><small>Suite</small></div></a>
+        <a class="room" href="camere.html#suite-relax"><div class="ph"><span class="num">06</span><span class="tour-tag">Tour 3D</span><img src="img/GCF_0046.jpg" alt="Suite Relax" loading="lazy"></div><div class="meta"><h3>Suite Relax</h3><small>Suite</small></div></a>
+        <div class="room-end">
+          <p class="lead">Bagno privato, asciugacapelli, TV, minifrigo, cassaforte, Wi-Fi gratuito e kit di cortesia in ogni camera.</p>
+          <a class="btn btn-gold" href="camere.html">Tutte le camere</a>
+        </div>
+      </div>
+      <div class="rooms-bar"><i></i></div>
+    </section>
+
+    <!-- RESTAURANT -->
+    <section class="section light" id="ristorante">
+      <div class="wrap feature">
+        <div>
+          <div class="feature-media" data-reveal><img src="img/Hotel-Royal-Sala-Ristorante-2.jpg" alt="Sala ristorante" data-parallax="0.15"><span class="tag">À la carte</span></div>
+        </div>
+        <div>
+          <span class="label">Ristorante</span>
+          <h2 class="display h-lg" data-split>La cura dei dettagli, <span class="it">anche a tavola</span></h2>
+          <p class="lead" data-fade>L’Hotel Royal estende la cura dei dettagli specialmente alla ristorazione, con numerose proposte di qualità, tipiche della tradizione regionale e nazionale, volte alla continua ricerca della perfezione culinaria.</p>
+          <p class="lead" data-fade>La colazione è a buffet, per pranzo e cena è previsto il servizio al tavolo con menù à la carte.</p>
+          <div class="feature-mini" data-stagger>
+            <img src="img/Hotel-Royal-Sala-Colazione-e-Buffet-3.jpg" alt="Colazione a buffet" loading="lazy">
+            <img src="img/Hotel-Royal-Sala-Colazione-e-Buffet-7.jpg" alt="Sala colazione" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MEETING -->
+    <section class="section" id="meeting">
+      <div class="wrap feature flip">
+        <div>
+          <div class="feature-media" data-reveal><img src="img/Hotel-Royal-Sala-Convegni-2.jpg" alt="Sala convegni" data-parallax="0.15"><span class="tag">150 mq · 100 posti</span></div>
+        </div>
+        <div>
+          <span class="label">Meeting & Eventi</span>
+          <h2 class="display h-lg" data-split>Sala <span class="it gold">Convegni</span></h2>
+          <p class="lead" data-fade>Una sala di 150 mq, con capienza massima di 100 persone, modulabile a seconda del numero dei partecipanti. Ospita ogni anno i meeting e gli eventi più importanti della città di Cosenza.</p>
+          <ul class="checks" data-stagger>
+            <li>Videoproiettore</li><li>Impianto audio</li><li>Microfono</li><li>Internet Wi-Fi</li><li>Lavagna mobile</li><li>Pranzi di lavoro</li>
+          </ul>
+          <p class="lead" data-fade style="margin-top:2rem">Possibilità di convenzioni per incontri periodici e pranzi di lavoro, in base alle proprie esigenze.</p>
+          <a class="btn btn-gold" href="https://booking.slope.it/fa4448fa-8cdc-4372-9fef-4f1ab25cd155/quote-request" target="_blank" rel="noopener">Richiedi preventivo ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section light" id="servizi">
+      <div class="wrap">
+        <span class="label">I nostri servizi</span>
+        <h2 class="display h-lg" data-split>Tutto ciò che serve, <span class="it">senza pensieri</span></h2>
+        <div class="services" data-stagger>
+          <div class="service"><span class="n">01</span><svg viewBox="0 0 48 48"><path d="M24 4v40M7 14l34 20M7 34l34-20M18 6l6 5 6-5M18 42l6-5 6 5"/></svg><h3>Ambienti climatizzati</h3></div>
+          <div class="service"><span class="n">02</span><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="19"/><path d="M24 13v11l7 5"/></svg><h3>Check-in e check-out express</h3></div>
+          <div class="service"><span class="n">03</span><svg viewBox="0 0 48 48"><path d="M4 18a28 28 0 0 1 40 0M10 25a19 19 0 0 1 28 0M16 32a10 10 0 0 1 16 0"/><circle cx="24" cy="39" r="2"/></svg><h3>Wi-Fi in fibra</h3></div>
+          <div class="service"><span class="n">04</span><svg viewBox="0 0 48 48"><path d="M10 6h28L24 24zM24 24v16M15 42h18"/></svg><h3>Bar Lounge</h3></div>
+          <div class="service"><span class="n">05</span><svg viewBox="0 0 48 48"><path d="M14 4v40M8 4v12a6 6 0 0 0 12 0V4M34 4c-4 0-6 6-6 12s2 8 6 8v20"/></svg><h3>Ristorante</h3></div>
+          <div class="service"><span class="n">06</span><svg viewBox="0 0 48 48"><path d="M6 32h36v6H6zM10 32V20a6 6 0 0 1 6-6h16a6 6 0 0 1 6 6v12M16 26h16"/></svg><h3>Garage interno</h3></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OFFER -->
+    <section class="section">
+      <div class="wrap offer-wrap">
+        <div>
+          <span class="label">Prenotazione diretta</span>
+          <h2 class="display h-lg" data-split>Prenota diretto, <span class="it gold">senza intermediari</span></h2>
+          <p class="lead" data-fade>Controlla le disponibilità in base alle date del tuo viaggio: sul nostro sito troverai sempre la migliore tariffa disponibile.</p>
+        </div>
+        <div class="offer" data-fade>
+          <div class="offer-card">
+            <div class="top"><span>Sito ufficiale</span><span>★★★★</span></div>
+            <div class="offer-title">Il tuo soggiorno <span class="it gold">a Cosenza</span></div>
+            <div class="per">Scegli le date e verifica subito la disponibilità.</div>
+            <ul><li>Pernottamento e prima colazione</li><li>Check-in e check-out express</li><li>Garage con accesso diretto</li><li>Wi-Fi gratuito in fibra</li></ul>
+            <a class="btn btn-gold" href="https://booking.slope.it/fa4448fa-8cdc-4372-9fef-4f1ab25cd155" target="_blank" rel="noopener">Verifica disponibilità ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIRTUAL TOUR -->
+    <section class="tour">
+      <div class="tour-media"><img src="img/GCF_0040.jpg" alt=""></div>
+      <div class="wrap tour-content">
+        <span class="label">Virtual Tour 3D</span>
+        <h2 class="display h-xl">Entra, <span class="it gold">prima di arrivare</span></h2>
+        <a class="tour-play" href="https://my.matterport.com/show/?m=qAsuZwDXsB5" target="_blank" rel="noopener">Play</a>
+      </div>
+    </section>
+
+    <!-- GALLERY STRIP -->
+    <section class="section" style="padding-bottom:3rem">
+      <div class="wrap rooms-head">
+        <div><span class="label">Gallery</span><h2 class="display h-lg" data-split>Uno sguardo <span class="it">dentro</span></h2></div>
+        <a class="btn btn-line" href="gallery.html">Tutte le foto</a>
+      </div>
+    </section>
+    <div class="strip">
+      <div class="strip-row">
+        <a href="gallery.html"><img src="img/Hotel-Royal-Hall-Bar-4-1.jpg" alt="" loading="lazy"></a>
+        <a href="gallery.html"><img src="img/GCF_0374.jpg" alt="" loading="lazy"></a>
+        <a href="gallery.html"><img src="img/Hotel-Royal-Sala-Colazione-e-Buffet-9.jpg" alt="" loading="lazy"></a>
+        <a href="gallery.html"><img src="img/Hotel-Royal-Camere-Matrimoniale-6.jpg" alt="" loading="lazy"></a>
+        <a href="gallery.html"><img src="img/Hotel-Royal-Sala-Convegni-1.jpg" alt="" loading="lazy"></a>
+        <a href="gallery.html"><img src="img/Hotel-Royal-Dettagli-8.jpg" alt="" loading="lazy"></a>
+        <a href="gallery.html" aria-hidden="true" tabindex="-1"><img src="img/Hotel-Royal-Hall-Bar-4-1.jpg" alt="" loading="lazy"></a>
+        <a href="gallery.html" aria-hidden="true" tabindex="-1"><img src="img/GCF_0374.jpg" alt="" loading="lazy"></a>
+        <a href="gallery.html" aria-hidden="true" tabindex="-1"><img src="img/Hotel-Royal-Sala-Colazione-e-Buffet-9.jpg" alt="" loading="lazy"></a>
+        <a href="gallery.html" aria-hidden="true" tabindex="-1"><img src="img/Hotel-Royal-Camere-Matrimoniale-6.jpg" alt="" loading="lazy"></a>
+        <a href="gallery.html" aria-hidden="true" tabindex="-1"><img src="img/Hotel-Royal-Sala-Convegni-1.jpg" alt="" loading="lazy"></a>
+        <a href="gallery.html" aria-hidden="true" tabindex="-1"><img src="img/Hotel-Royal-Dettagli-8.jpg" alt="" loading="lazy"></a>
+      </div>
+      <div class="strip-row rev">
+        <a href="gallery.html"><img src="img/GCF_0383.jpg" alt="" loading="lazy"></a>
+        <a href="gallery.html"><img src="img/Hotel-Royal-Sala-Ristorante-3.jpg" alt="" loading="lazy"></a>
+        <a href="gallery.html"><img src="img/Hotel-Royal-Camere-Bilocale-6.jpg" alt="" loading="lazy"></a>
+        <a href="gallery.html"><img src="img/Hotel-Royal-Sala-Colazione-e-Buffet-2.jpg" alt="" loading="lazy"></a>
+        <a href="gallery.html"><img src="img/Hotel-Royal-Camere-Tripla-4-2.jpg" alt="" loading="lazy"></a>
+        <a href="gallery.html"><img src="img/GCF_0015.jpg" alt="" loading="lazy"></a>
+        <a href="gallery.html" aria-hidden="true" tabindex="-1"><img src="img/GCF_0383.jpg" alt="" loading="lazy"></a>
+        <a href="gallery.html" aria-hidden="true" tabindex="-1"><img src="img/Hotel-Royal-Sala-Ristorante-3.jpg" alt="" loading="lazy"></a>
+        <a href="gallery.html" aria-hidden="true" tabindex="-1"><img src="img/Hotel-Royal-Camere-Bilocale-6.jpg" alt="" loading="lazy"></a>
+        <a href="gallery.html" aria-hidden="true" tabindex="-1"><img src="img/Hotel-Royal-Sala-Colazione-e-Buffet-2.jpg" alt="" loading="lazy"></a>
+        <a href="gallery.html" aria-hidden="true" tabindex="-1"><img src="img/Hotel-Royal-Camere-Tripla-4-2.jpg" alt="" loading="lazy"></a>
+        <a href="gallery.html" aria-hidden="true" tabindex="-1"><img src="img/GCF_0015.jpg" alt="" loading="lazy"></a>
+      </div>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

@@ -3,113 +3,73 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Dove siamo e contatti, Hotel Royal Cosenza</title>
-  <meta name="description" content="Hotel Royal, Via delle Medaglie d'Oro, 87100 Cosenza. Telefono 0984 412165, direzione@hotelroyalsas.it. Richiedi un preventivo senza impegno.">
-  <meta name="theme-color" content="#f6f5f2">
+  <title>Dove &amp; Info – Hotel Royal Cosenza</title>
+  <meta name="description" content="Hotel Royal Cosenza, Via delle Medaglie d'Oro, 87100 Cosenza. Tel. +39 0984 412165 – direzione@hotelroyalsas.it. Richiesta di preventivo non impegnativa.">
+  <meta name="theme-color" content="#12110f">
   <link rel="icon" href="img/logo_royal-color.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Marcellus&amp;family=Public+Sans:wght@400;600&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-  <header class="header">
-    <div class="wrap">
-      <a class="logo" href="index.html"><img src="img/logo_royal-color.png" alt="Hotel Royal Cosenza, quattro stelle" width="96" height="52"></a>
-      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
-      <nav class="nav" id="nav" aria-label="Menu principale">
-      <a href="camere.html">Camere</a>
-      <a href="index.html#ristorante">Ristorante</a>
-      <a href="index.html#convegni">Sala convegni</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="dove-info.html" aria-current="page">Dove siamo</a>
-      <a class="nav-tel" href="tel:+390984412165">0984 412165</a>
-      <a class="btn" href="https://booking.slope.it/fa4448fa-8cdc-4372-9fef-4f1ab25cd155" target="_blank" rel="noopener">Prenota</a>
-      </nav>
-    </div>
-  </header>
-
+<body data-page="dove-info">
+  <div id="site-header"></div>
   <main>
-    <div class="wrap">
-      <header class="page-head">
-        <h1>Dove siamo</h1>
-        <p class="intro">In Via delle Medaglie d’Oro, nel centro di Cosenza, a pochi passi dal MAB, da Corso Mazzini e dal Duomo. Gli ospiti hanno a disposizione il garage con accesso diretto in hotel.</p>
-      </header>
-      <div class="contact">
+    <header class="page-hero">
+      <div class="bg"><img src="img/Hotel-Royal-Hall-Bar-4-1.jpg" alt="" data-parallax="0.2"></div>
+      <div class="wrap">
         <div>
-          <h2>Contatti</h2>
-          <dl class="facts">
-            <div><dt>Indirizzo</dt><dd>Via delle Medaglie d'Oro, 87100 Cosenza</dd></div>
-            <div><dt>Telefono e fax</dt><dd><a class="link" href="tel:+390984412165">0984 412165</a></dd></div>
-            <div><dt>WhatsApp</dt><dd><a class="link" href="https://wa.me/393760412155" target="_blank" rel="noopener">376 041 2155</a></dd></div>
-            <div><dt>Email</dt><dd><a class="link" href="mailto:direzione@hotelroyalsas.it">direzione@hotelroyalsas.it</a></dd></div>
-          </dl>
-          <div class="btn-row"><a class="btn btn-line" href="https://www.google.com/maps/dir/?api=1&amp;destination=Hotel+Royal+Via+delle+Medaglie+d%27Oro+Cosenza" target="_blank" rel="noopener">Indicazioni stradali</a></div>
+          <span class="label">Dove &amp; Info</span>
+          <h1 class="display h-xl">Nel cuore <span class="it gold">di Cosenza</span></h1>
         </div>
+        <p>A pochi passi da Corso Mazzini, dal MAB e dal Duomo.</p>
+      </div>
+    </header>
+
+    <section class="section">
+      <div class="wrap contact">
         <div>
-          <h2>Richiedi un preventivo</h2>
-          <p style="margin-bottom:1.2rem">Scrivici date e richieste: ti risponderemo il prima possibile, senza impegno.</p>
-          <form class="form" id="contact-form">
-            <label>Nome <input name="nome" required autocomplete="given-name"></label>
-            <label>Cognome <input name="cognome" required autocomplete="family-name"></label>
-            <label>Email <input type="email" name="email" required autocomplete="email"></label>
-            <label>Telefono <input type="tel" name="telefono" autocomplete="tel"></label>
-            <label>Arrivo <input type="date" name="arrivo"></label>
-            <label>Partenza <input type="date" name="partenza"></label>
-            <label class="full">Richieste <textarea name="richieste"></textarea></label>
-            <label class="full consent"><input type="checkbox" required> Acconsento al trattamento dei dati personali ai sensi del Regolamento UE 2016/679.</label>
-            <div class="full"><button class="btn" type="submit">Invia la richiesta</button></div>
-            <p class="full form-note">Il pulsante apre il tuo programma di posta con la richiesta già compilata.</p>
+          <span class="label">Contatti</span>
+          <h2 class="display h-lg" data-split>Siamo qui <span class="it">per te</span></h2>
+          <p class="lead" data-fade>Garage con accesso diretto in hotel, riservato agli ospiti. Scrivici o chiamaci: ti rispondiamo nel minor tempo possibile.</p>
+          <div class="c-items" data-stagger>
+            <div class="c-item"><small>Indirizzo</small><span>Via delle Medaglie d'Oro,<br>87100 Cosenza</span><i></i></div>
+            <a class="c-item" href="tel:+390984412165"><small>Tel. / Fax</small><span>(+39) 0984 412165</span><i class="go">→</i></a>
+            <a class="c-item" href="https://wa.me/393760412155" target="_blank" rel="noopener"><small>WhatsApp</small><span>(+39) 376 041 2155</span><i class="go">→</i></a>
+            <a class="c-item" href="mailto:direzione@hotelroyalsas.it"><small>Email</small><span>direzione@hotelroyalsas.it</span><i class="go">→</i></a>
+          </div>
+        </div>
+        <div class="c-form" data-fade>
+          <span class="label">Richiesta non impegnativa</span>
+          <h2 class="display h-md">Scrivici</h2>
+          <p class="lead">Compila il modulo: un nostro operatore ti risponderà nel minor tempo possibile.</p>
+          <form id="contact-form" class="fields">
+            <div class="field"><input id="f-nome" name="nome" placeholder=" " required autocomplete="given-name"><label for="f-nome">Nome</label></div>
+            <div class="field"><input id="f-cognome" name="cognome" placeholder=" " required autocomplete="family-name"><label for="f-cognome">Cognome</label></div>
+            <div class="field"><input id="f-email" type="email" name="email" placeholder=" " required autocomplete="email"><label for="f-email">Email</label></div>
+            <div class="field"><input id="f-tel" type="tel" name="telefono" placeholder=" " autocomplete="tel"><label for="f-tel">Telefono</label></div>
+            <div class="field date"><input id="f-arr" type="date" name="arrivo"><label for="f-arr">Data di arrivo</label></div>
+            <div class="field date"><input id="f-par" type="date" name="partenza"><label for="f-par">Data di partenza</label></div>
+            <div class="field full"><textarea id="f-msg" name="richieste" placeholder=" "></textarea><label for="f-msg">Richieste</label></div>
+            <label class="consent"><input type="checkbox" required> Acconsento al trattamento dei dati personali ai sensi del Reg. UE 2016/679.</label>
+            <div class="form-actions"><button class="btn btn-dark" type="submit">Invia richiesta <svg class="arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 8h14M9 2l6 6-6 6"/></svg></button></div>
           </form>
         </div>
       </div>
-    </div>
-    <div class="band"></div>
-    <section class="map" aria-label="Mappa">
-      <iframe title="Mappa: Hotel Royal, Via delle Medaglie d'Oro, Cosenza" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Hotel+Royal,+Via+delle+Medaglie+d%27Oro,+87100+Cosenza&amp;output=embed"></iframe>
+    </section>
+
+    <section class="map">
+      <iframe title="Mappa Hotel Royal Cosenza" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Hotel+Royal,+Via+delle+Medaglie+d%27Oro,+87100+Cosenza&amp;output=embed"></iframe>
+      <div class="pin">
+        <strong>Hotel Royal</strong>
+        <p>Via delle Medaglie d'Oro, 87100 Cosenza</p>
+        <a class="btn btn-gold" href="https://www.google.com/maps/dir/?api=1&amp;destination=Hotel+Royal+Via+delle+Medaglie+d%27Oro+Cosenza" target="_blank" rel="noopener">Indicazioni ↗</a>
+      </div>
     </section>
   </main>
-
-  <footer class="footer">
-    <div class="wrap">
-      <div class="footer-top">
-        <div>
-          <img src="img/logo_royal-white.png" alt="Hotel Royal Cosenza" width="118" height="64">
-          <p>Hotel quattro stelle nel centro di Cosenza, a pochi passi dal MAB, da Corso Mazzini e dal Duomo.</p>
-        </div>
-        <div>
-          <h2>Contatti</h2>
-          <ul>
-            <li>Via delle Medaglie d'Oro, 87100 Cosenza</li>
-            <li><a href="tel:+390984412165">Telefono e fax 0984 412165</a></li>
-            <li><a href="https://wa.me/393760412155" target="_blank" rel="noopener">WhatsApp 376 041 2155</a></li>
-            <li><a href="mailto:direzione@hotelroyalsas.it">direzione@hotelroyalsas.it</a></li>
-          </ul>
-        </div>
-        <div>
-          <h2>Prenotazioni</h2>
-          <ul>
-            <li><a href="https://booking.slope.it/fa4448fa-8cdc-4372-9fef-4f1ab25cd155" target="_blank" rel="noopener">Verifica disponibilità</a></li>
-            <li><a href="https://booking.slope.it/fa4448fa-8cdc-4372-9fef-4f1ab25cd155/quote-request" target="_blank" rel="noopener">Richiedi un preventivo</a></li>
-            <li><a href="https://my.matterport.com/show/?m=qAsuZwDXsB5" target="_blank" rel="noopener">Tour virtuale 3D</a></li>
-          </ul>
-        </div>
-        <div>
-          <h2>Il sito</h2>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="camere.html">Camere</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="dove-info.html">Dove siamo</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-legal">
-        <span>Hotel Royal Cosenza, P.IVA 01612120780</span>
-        <span>Codice regionale 078045-ALB-00004, CIN IT078045A1EGHN33YP</span>
-      </div>
-    </div>
-  </footer>
+  <div id="site-footer"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

@@ -7,17 +7,15 @@ Pubblicato con GitHub Pages.
 
 | File | Contenuto |
 | --- | --- |
-| `index.html` | Home: prenotazione (le date sono il titolo), hotel, camere, ristorante, sala convegni, tour 3D |
+| `index.html` | Home: hero, hotel, camere, ristorante, sala convegni, servizi, prenotazione diretta, tour 3D |
 | `camere.html` | Le sei tipologie di camere e suite |
 | `gallery.html` | Galleria fotografica con filtri e lightbox |
-| `dove-info.html` | Dove siamo: contatti, richiesta di preventivo, mappa |
+| `dove-info.html` | Contatti, modulo di richiesta, mappa |
 | `css/style.css` | Stile |
-| `js/main.js` | Menu mobile, date di prenotazione, foto delle camere, filtri e lightbox della gallery, modulo (nessuna libreria esterna) |
+| `js/main.js` | Header/menu/footer condivisi, animazioni (GSAP + ScrollTrigger da CDN), dati dell'hotel |
 | `img/` | Foto e logo |
 
-Header e footer sono ripetuti in ognuna delle quattro pagine HTML: se cambi un contatto o un link, aggiornalo in tutte.
-
-Colori: marmo `#F6F5F2`, grafite `#3E3E41`, rosso hall `#A8232B`, albicocca `#EFA24A`, ardesia `#1E2226`. Caratteri: Marcellus (titoli) e Public Sans (testi).
+Telefono, email, link di prenotazione e tour 3D si modificano in un solo punto: l'oggetto `HOTEL` in cima a `js/main.js`.
 
 ## Anteprima in locale
 
